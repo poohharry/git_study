@@ -17,3 +17,9 @@ nav{
     background-color: lightskyblue;
     height: 70px;
 }
+#login{
+    text-align: right;
+}
+#logo{
+    height: 150px;
+}
