@@ -1,0 +1,19 @@
+
+
+header{
+    background-color: greenyellow;
+    height: 150px;
+}
+main{
+    background-color: khaki;
+    height: 500px;
+}
+footer{
+    background-color: lightpink;
+    height: 150px;
+    margin: 0;
+}
+nav{
+    background-color: lightskyblue;
+    height: 70px;
+}
