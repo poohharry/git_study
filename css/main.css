@@ -18,11 +18,10 @@ nav{
     min-height: 70px;
 }
 #login{
-    display: inline-block; width: 300px;
-    text-align: right;
+    text-align: center;
 }
 #logo{
-    height: 150px;
+    width: 150px;
 }
 
 
