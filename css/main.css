@@ -2,22 +2,23 @@
 
 header{
     background-color: greenyellow;
-    height: 150px;
+    min-height: 150px;
 }
 main{
     background-color: khaki;
-    height: 500px;
+    min-height: 500px;
 }
 footer{
     background-color: lightpink;
-    height: 150px;
+    min-height: 150px;
     margin: 0;
 }
 nav{
     background-color: lightskyblue;
-    height: 70px;
+    min-height: 70px;
 }
 #login{
+    display: inline-block; width: 300px;
     text-align: right;
 }
 #logo{
