@@ -1,4 +1,7 @@
 
+*{
+    margin: 0px;
+}
 
 header{
     background-color: greenyellow;
@@ -17,11 +20,15 @@ nav{
     background-color: lightskyblue;
     min-height: 70px;
 }
+
+
+
 #login{
-    text-align: center;
+    text-align: right;
+    position: relative;
 }
 #logo{
-    width: 150px;
+    width: 200px;
 }
 
 
@@ -32,4 +39,17 @@ nav{
 .font{
     font-family: "sea_font";
     font-size: x-large;
+}
+
+
+.container{
+    display: flex;
+}
+.header_display{
+    height: 150px;
+    flex-grow: 1;
+}
+.nav_display{
+    margin: 30px;
+    height: 70px;
 }

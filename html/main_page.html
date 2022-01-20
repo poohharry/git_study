@@ -14,17 +14,24 @@
 
 <body>
     <header>
-        <div style="display: flex;">
-            <div style="width: 25%;">
-                <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> <!-- 메인페이지 이동용 로고 그림 -->
+        <div class="container">
+
+            
+            <div class="header_display" style="background-color: bisque; flex-grow: 5;">
+                <!-- <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a>  -->
+                <!-- 메인페이지 이동용 로고 그림 -->
             </div>
-            <div style="background-color: brown; width: 70%;">
+
+
+            <div class="header_display" style="background-color: rgb(255, 153, 247); flex-grow: 30;" >
                 <p>
                     
                     빈공간(?)
                 </p>
             </div>
-            <div id="login" style="background-color: aqua; width: 5%;">  
+
+
+            <div id="login" class="header_display" style="background-color: aqua">  
                     <!-- display: inline-block  -> 라인이었던 span을 블록으로 만들어줌 
                         span의 너비를 300px로 지정해줬고 그 블록에서 우측으로 정렬된 상태
                     -->
@@ -34,13 +41,21 @@
         </div>
     </header>
 
-    <div>
-        <nav>
+    <nav class="container">
+        
+        <div class="nav_display">
             <a href="map.html">MAP</a> 
+        </div>
+            
+        <div class="nav_display">
             <a href="location.html">SPOT</a>
+        </div>
+        
+        <div class="nav_display">
             <a href="cart.html">CART</a>
-        </nav>
-    </div>
+        </div>
+
+    </nav>
     
     <main>
         <p class="font">
@@ -50,7 +65,6 @@
     
     <footer>
         <div>
-            <!-- p로 글 쓰면 레이아웃 사이 1줄 공백이 생김 -->
             <p><b>문의 : </b> 010-4240-3631 <b>|</b> poohharry@naver.com </p>
             <p><b>Address : </b> 부산광역시 부산진구 전포동 892-21</p>
             <p><b>Donation : </b> 기업은행 980-006030-01-019</p>
