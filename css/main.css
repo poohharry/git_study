@@ -5,30 +5,26 @@
 
 header{
     background-color: greenyellow;
-    min-height: 150px;
+    height: 75px;
 }
 main{
     background-color: khaki;
-    min-height: 500px;
+    height: 100%;
 }
 footer{
     background-color: lightpink;
-    min-height: 150px;
+    height: 120px;
     margin: 0;
 }
 nav{
     background-color: lightskyblue;
-    min-height: 70px;
+    height: 75px;
 }
 
 
-
-#login{
-    text-align: right;
-    position: relative;
-}
 #logo{
-    width: 200px;
+    height: 75px;
+    object-fit: cover;
 }
 
 
@@ -41,15 +37,29 @@ nav{
     font-size: x-large;
 }
 
+#main_contents{
+    text-align: center;
+    background-color: #eee;
+    flex-grow: 1
+    
+}
+
+.rayout{
+    display: flex;
+    flex-direction: column;
+}
 
 .container{
     display: flex;
+    
 }
-.header_display{
-    height: 150px;
-    flex-grow: 1;
+.header_display_logo{
+    background-size: cover;
+    
 }
 .nav_display{
-    margin: 30px;
-    height: 70px;
+    line-height: 75px;
+}
+.item{
+    
 }
