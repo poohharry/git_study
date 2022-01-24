@@ -54,8 +54,29 @@
                 
             </div>
         </header>
-        <main>
-
+        <main class="container" style="height: 100%; width: 100%;">
+            <div class="font" id="main_contents">
+                <form style="margin: 30px;">
+                    <fieldset style="margin: 30px 0px">
+                        <legend>계정정보</legend>
+                        <ul style="list-style-type: none;">
+                            <li>아이디<input type="text"></li>
+                            <li>비밀번호<input type="password"></li>
+                            <li>이메일<input type="email"></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>개인정보</legend>
+                        <ul style="list-style-type: none;">
+                            <li>이름<input type="text"></li>
+                            <li>주민번호<input type="text" style="width: 60px;">- <input type="text" style="width: 70px;"><input type="button" value="실명확인"></li>
+                            <li>주소<input type="text"> <input type="button" value="주소찾기"></li>
+                            <li>상세주소<input type="text"></li>
+                        </ul>
+                    </fieldset>
+                    <input type="submit" value="가입하기">
+                </form>
+            </div>
         </main>
         <footer>
             <div>

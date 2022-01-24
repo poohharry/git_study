@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인페이지</title>
+    <!-- <style>
+        .updown { border: 0.1px solid black; width: 0.1px; height: 12px; }
+
+    </style> -->
     
  
     <link rel="stylesheet" href="../css/main.css">
@@ -20,11 +24,11 @@
                 
                 
                 <div>
-                    <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                     <!-- 메인페이지 이동용 로고 그림 -->
+                    <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                 </div>
                 
-                
+                <!-- 네비바  -->
                 <div class="header_display" style="flex-grow: 1;" >
                     
                     <nav class="container">
@@ -50,27 +54,42 @@
                     </nav>
                 </div>
                 
-                
-                <div>  
-                    <a href="login.html">로그인</a> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                    <a href="sign-up.html">회원가입</a>
-                    <a href="cart.html">장바구니</a>
+                <!-- 로그인 및 장바구니 버튼 -->
+                <div class="container">
+                    <div>
+                        <a href="login.html">로그인</a> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+
+                    </div>
+                    <div>
+                        <a href="sign-up.html">회원가입</a> <br>
+                        <sub>(임시)</sub> <!-- 로그인 페이지 안의 회원가입 버튼으로 이동하게 할 예정 -->
+
+                    </div>
+                    <div>
+                        <a href="cart.html">장바구니</a>
+                        <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+
+                    </div>
                     
                 </div>
                 
             </div>
         </header>
         
-        
+        <!-- 메인 콘텐츠 -->
         <main class="container" style="height: 100%; width: 100%;">
             <div class="font" id="main_contents" style="line-height: 1000px;">
                 메인 내용이 들어갈 레이아웃
             </div>
         </main>
         
+        <!-- 기타 정보들 -->
         <footer>
+            <!-- <div class="container">
+                <p><b>Help : </b> 010-4240-3631 <div class="updown"></div> poohharry@naver.com </p>
+            </div> -->
             <div>
-                <p><b>Help : </b> 010-4240-3631 <b>|</b> poohharry@naver.com </p>
+                <p><b>Help : </b> 010-4240-3631 | poohharry@naver.com </p>
                 <p><b>Address : </b> 부산광역시 부산진구 전포동 892-21</p>
                 <p><b>Donation : </b> 기업은행 980-006030-01-019</p>
             </div>
