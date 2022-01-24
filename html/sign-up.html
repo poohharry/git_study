@@ -9,18 +9,17 @@
 </head>
 <body>
     <div style="height: 1000px;">
+        
         <header>
             <div class="container">
                 
-                
                 <div>
-                    <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                     <!-- 메인페이지 이동용 로고 그림 -->
+                    <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                 </div>
                 
                 
                 <div class="header_display" style="flex-grow: 1;" >
-                    
                     <nav class="container">
                         <div class="nav_display">
                             <a href="introduce.html">소개</a>
@@ -45,19 +44,29 @@
                 </div>
                 
                 
-                <div>  
-                    <a href="login.html">로그인</a> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                    <a href="sign-up.html">회원가입</a>
-                    <a href="cart.html">장바구니</a>
-                    
+                <!-- 로그인 및 장바구니 버튼 -->
+                <div class="container">
+                    <div>
+                        <a href="login.html">로그인</a> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                    </div>
+                    <div>
+                        <a href="sign-up.html">회원가입</a> <br>
+                        <sub>(임시)</sub> <!-- 로그인 페이지 안의 회원가입 버튼으로 이동하게 할 예정 -->
+                    </div>
+                    <div>
+                        <a href="cart.html">장바구니</a>
+                        <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+                    </div> 
                 </div>
                 
             </div>
         </header>
         <main class="container" style="height: 100%; width: 100%;">
             <div class="font" id="main_contents">
+
                 <form style="margin: 30px;">
-                    <fieldset style="margin: 30px 0px">
+                    <!-- 계정정보 -->
+                    <fieldset style="margin: 30px auto; width: 600px;">
                         <legend>계정정보</legend>
                         <ul style="list-style-type: none;">
                             <li>아이디<input type="text"></li>
@@ -65,7 +74,8 @@
                             <li>이메일<input type="email"></li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <!-- 개인정보 -->
+                    <fieldset style="margin: 30px auto; width: 600px;">
                         <legend>개인정보</legend>
                         <ul style="list-style-type: none;">
                             <li>이름<input type="text"></li>
