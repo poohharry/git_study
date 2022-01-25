@@ -20,6 +20,11 @@ nav{
     background-color: lightskyblue;
     height: 75px;
 }
+.default_rayout{
+    min-height: 1500px; 
+    width: 1200px; 
+    margin: 30px auto;
+}
 
 
 #logo{
