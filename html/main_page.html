@@ -12,76 +12,55 @@
     
  
     <link rel="stylesheet" href="../css/main.css">
-
 </head>
 
 
-<body class="layout">
+<body>
     <div class="default_layout">
-
         <header>
-            <div class="container">
-                
-                
-                <div>
-                    <!-- 메인페이지 이동용 로고 그림 -->
+                <!-- 메인페이지 이동용 로고 그림 -->
+                <div class="logoBox">
                     <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                 </div>
                 
                 <!-- 네비바  -->
-                <div class="header_display" style="flex-grow: 1;" > <!-- flex-grow로 가운데 너비는 자동으로 맞춰짐 -->
-                                                                    <!-- 왼쪽 로고와 오른쪽 로그인, 장바구니는 고정-->
-                                                                    <!-- 헤더 너비가 변하면 안된다는걸 깨달음 수정필요 -->
-                    <nav >
-                        <div class="nav_display">
-                            <a href="introduce.html">소개</a>
-                        </div>
-                        <div class="nav_display">
-                            <a href="map.html">지도</a> 
-                        </div>
+                <nav>
+                    <ul>
+                        <li><a href="introduce.html" class="nav_display">소개</a></li>
+                        <li><a href="map.html" class="nav_display">지도</a> </li>
+                        <li><a href="location.html" class="nav_display">추천관광지</a></li>
+                        <li><a href="restaurant.html" class="nav_display">추천식당</a></li>
+                        <li><a href="rest.html" class="nav_display">추천숙소</a></li>
+                    </ul>
                         
-                        <div class="nav_display">
-                            <a href="location.html">추천관광지</a>
-                        </div>
-                        
-                        <div class="nav_display">
-                            <a href="restaurant.html">추천식당</a>
-                            <ul>
-                                <li>한식</li>
-                                <li>일식</li>
-                                <li>중식</li>
-                                <li>양식</li>
-                                <li>디저트, 카페</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="nav_display">
-                            <a href="rest.html">추천숙소</a>
-                        </div>
-                        
-                    </nav>
-                </div>
+                        <!-- <ul>
+                            <li>한식</li>
+                            <li>일식</li>
+                            <li>중식</li>
+                            <li>양식</li>
+                            <li>디저트, 카페</li>
+                        </ul> -->
+                    
+                </nav>
+                
                 
                 <!-- 로그인 및 장바구니 버튼 -->
-                <div class="container">
-                    <div>
+                <div class="login_cart">
+                    <div class="log_cart">
                         <a href="login.html">로그인</a> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-
                     </div>
-                    <div>
+
+                    <div class="log_cart">
                         <a href="sign-up.html">회원가입</a> <br>
                         <sub>(임시)</sub> <!-- 로그인 페이지 안의 회원가입 버튼으로 이동하게 할 예정 -->
-
                     </div>
-                    <div>
+
+                    <div class="log_cart">
                         <a href="cart.html">장바구니</a>
                         <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
-
                     </div>
                     
                 </div>
-                
-            </div>
         </header>
         
 
