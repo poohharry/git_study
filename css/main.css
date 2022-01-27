@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+.default_layout{ /* 전체 영역 */
+    width: 1200px; 
+    min-height: 1500px; 
+    margin: 30px auto;
+}
 header{
     width: 100%;
     height: 75px;
@@ -14,30 +19,30 @@ main{
 footer{
     background-color: lightpink;
     height: 120px;
-    margin: 0;
+    margin: 0px;
 }
 nav{
-    background-color: rgb(72, 157, 228);
     width: 800px;
     height: 75px;
+    float: left;
 }
 
-.default_layout{ /* 전체 영역 */
-    min-height: 1500px; 
-    width: 1200px; 
-    margin: 30px auto;
-}
 .logoBox{
     float: left;
     width: 150px;
     height: 75px;
 }
-
-#logo{
+#logo{  /* 로고 이미지 크기 고정 */
     width: 150px;
     height: 75px;
 }
 
+.login_cart{
+    background-color: burlywood;
+    width: 250px;
+    height: 75px;
+    float: left;
+}
 
 @font-face {
     font-family: "sea_font";
@@ -51,49 +56,34 @@ nav{
 #main_contents{
     text-align: center;
     background-color: #eee;
-    flex-grow: 1
-    
+
 }
 
-/* .layout{
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .container{
-    display: flex;
-    
-} */
-
 .nav_display{
-    /* margin: auto; */
-    background-color: orange;
+    background-color: cornflowerblue;
     float: left;
-    /* padding: 10px 40px; */
-    width: 150px;
+    width: 160px;
     height: 75px
     
 }
 
-.login_cart{
-    float: left;
-}
 a:link, a:visited {
     color:black;
     text-decoration: none;
 }
 a:hover {
-    background-color: darkgray;
-    
-    
+    background-color: rgb(93, 93, 241);
 }
+
 ul{
     list-style-type: none;
     float: left;
+    list-style-position: inside;
+    padding: 0px;
 }
 li{
-    /* display: block; */
     float: left;
     text-align: center;
     line-height: 75px;
+    font-weight: bold;
 }
