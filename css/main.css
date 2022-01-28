@@ -16,7 +16,6 @@ header{
 main{
     background-color: khaki;
     min-height: 300px;
-    /* height: 100%; */
     
 }
 footer{
@@ -24,12 +23,8 @@ footer{
     height: 120px;
     padding: 10px;
 }
-nav{
-    width: 800px;
-    height: 75px;
-    float: left;
-}
 
+/* 헤더 레이아웃 구성*/
 .logoBox{
     float: left;
     width: 150px;
@@ -40,6 +35,12 @@ nav{
     height: 75px;
 }
 
+nav{
+    width: 800px;
+    height: 75px;
+    float: left;
+}
+
 .login_cart{
     background-color: burlywood;
     width: 250px;
@@ -48,29 +49,50 @@ nav{
 }
 
 
-@font-face {
-    font-family: "sea_font";
-    src: url("../resource/나눔손글씨\ 세아체.ttf") format("truetype");
-}
-.font{
-    font-family: "sea_font";
-    font-size: x-large;
-}
-
 #main_contents{
     text-align: center;
     background-color: #eee;
 
 
 }
-
+/* 네비바 관련 */
+.nav_menu{
+    width: 800px;
+    height: 75px;
+}
 .nav_display{
     background-color: cornflowerblue;
     float: left;
     width: 160px;
     height: 75px
-    
 }
+.caption{
+    clear: left;
+    opacity: 0;
+    overflow: hidden;
+}
+.caption_display{
+    display: block;
+    background-color: skyblue;
+    width: 160px;
+    height: 40px;
+}
+.caption li{
+    line-height: 40px;
+    overflow: hidden;
+    clear: left;
+    background-color: #eee;
+    z-index: -5;
+    /* pointer-events: none; */
+}
+.nav_menu li:hover .caption{
+    opacity: 1;
+    background-color: skyblue;
+    z-index: 10;
+    overflow: visible;
+    /* pointer-events: visible; */
+}
+
 
 a:link, a:visited {
     color:black;
@@ -93,7 +115,26 @@ header li{
     font-weight: bold;
 }
 
+/* 로그인 페이지 관련 */
 .loginPage_ul, .loginPage_ul li{
     clear: left;
     list-style-type: none;
+    
+}
+li label{
+    text-align: left;
+    display: inline-block;
+    width: 120px;
+}
+
+
+
+
+@font-face {
+    font-family: "sea_font";
+    src: url("../resource/나눔손글씨\ 세아체.ttf") format("truetype");
+}
+.font{
+    font-family: "sea_font";
+    font-size: x-large;
 }
