@@ -92,15 +92,15 @@ nav{
     overflow: visible;
     /* pointer-events: visible; */
 }
-
-
-a:link, a:visited {
+nav a:link, a:visited {
     color:black;
     text-decoration: none;
 }
-a:hover {
+nav a:hover {
     background-color: rgb(93, 93, 241);
 }
+
+
 
 header ul{
     list-style-type: none;
