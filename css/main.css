@@ -46,6 +46,9 @@ nav{
     width: 250px;
     height: 75px;
     float: left;
+    text-align: right;
+    font-weight: bold;
+    line-height: 65px;
 }
 
 
