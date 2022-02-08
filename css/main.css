@@ -159,11 +159,23 @@ li label{
 
 /* 추천관광지 */
 
+.lo_content_box{
+    width: 100%;
+    height: 270.25px;
+}
 .lo_photo{
     float: left;
     width: 400px;
+    height: 270.25px;
 }
-.lo_content_box{
-    width: 100%;
-    height: 275px;
+.lo_text{
+    float: left; 
+    width: 700px; 
+    margin: 0 10px;
+}
+.lo_hr{
+   clear: left;
+   border: 0;
+   height: 4px; 
+   margin: 5px 0 8px 0px;
 }
