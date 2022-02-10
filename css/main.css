@@ -98,6 +98,7 @@ nav{
     background-color: skyblue;
     z-index: 10;
     overflow: visible;
+    transition-duration: 0.1s;
 }
 nav li:hover ul{
     position: relative; /* nav li에 갖다 대면 nav li바로 밑으로 오도록 */
@@ -106,7 +107,7 @@ a:link, a:visited {
     color:black;
     text-decoration: none;
 }
-nav a:hover {
+nav ul li:hover > a{
     background-color: rgb(93, 93, 241);
 }
 
