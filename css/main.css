@@ -186,8 +186,12 @@ li label{
 /* 장바구니 */
 .basket{
    width: 320px; 
-   height: 900px; 
+   height: 500px; 
    background-color: #eee;
+   margin-left: 100%;
+   position: fixed;
+   top: 0px;
+   
 }
 .basket_title{
     width: 100%; 
