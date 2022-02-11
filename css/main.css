@@ -34,13 +34,11 @@ footer{
     width: 150px;
     height: 75px;
 }
-
 nav{
     width: 800px;
     height: 75px;
     float: left;
 }
-
 .login_cart{
     background-color: burlywood;
     width: 250px;
@@ -50,29 +48,31 @@ nav{
     font-weight: bold;
     line-height: 65px;
 }
-
-
 #main_contents{
     text-align: center;
     background-color: #eee;
     width: 100%;
     min-height: 200px;
 }
+
 /* 네비바 관련 */
-.nav_menu{
+.nav_menu{           /* 드롭다운 메뉴 전체 크기 */
     width: 800px;
     height: 75px;
 }
-.nav_display{
+.nav_display{       /* 드롭다운 상위 메뉴 1칸 */
     background-color: cornflowerblue;
     float: left;
     width: 160px;
     height: 75px
 }
-.caption{
+.caption{           /* 드롭다운 하위메늏 */
     clear: left;
     opacity: 0;
     overflow: hidden;
+    position: absolute;
+    width: 160px;
+    height: 75px;
 }
 .caption_display{
     display: block;
@@ -80,22 +80,16 @@ nav{
     width: 160px;
     height: 40px;
 }
-.caption{
-    position: absolute;
-    width: 160px;
-    height: 75px;
-}
+
 .caption li{
     line-height: 40px;
-    overflow: hidden;
-    clear: left;
-    background-color: #eee;
-    z-index: -5;
+    /* overflow: hidden; */
+    /* clear: left; */
+    /* z-index: -5; */
     
 }
 .nav_menu li:hover .caption{
     opacity: 1;
-    background-color: skyblue;
     z-index: 10;
     overflow: visible;
     transition-duration: 0.1s;
@@ -186,4 +180,17 @@ li label{
    border: 0;
    height: 4px; 
    margin: 5px 0 8px 0px;
+}
+
+
+/* 장바구니 */
+.basket{
+   width: 320px; 
+   height: 900px; 
+   background-color: #eee;
+}
+.basket_title{
+    width: 100%; 
+    height: 50px; 
+    background-color: #ddd;
 }
