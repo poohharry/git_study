@@ -188,9 +188,9 @@ li label{
    width: 320px; 
    height: 500px; 
    background-color: #eee;
-   margin-left: 100%;
+   /* margin-left: 100%;
    position: fixed;
-   top: 0px;
+   top: 0px; */
    
 }
 .basket_title{
