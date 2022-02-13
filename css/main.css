@@ -184,10 +184,10 @@ li label{
 
 
 /* 장바구니 */
-.basket{
+#basket{
    width: 320px; 
    height: 500px; 
-   background-color: #eee;
+   /* background-color: #eee; */
    /* margin-left: 100%;
    position: fixed;
    top: 0px; */

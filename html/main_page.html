@@ -10,7 +10,8 @@
         
     </style>
     
-    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
@@ -67,7 +68,6 @@
                 <div style="margin: 5px;">
                     <a href="login.html">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                     <button onclick="cart_open(cart);">장바구니</button>
-                    <script src="../js/cart.js"></script>
                     <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
                 </div>
            
@@ -81,6 +81,7 @@
         <!-- 메인 콘텐츠 -->
 
         <main>
+            
             
             
         </main>
@@ -100,8 +101,10 @@
         
         
     </div>
-    <button onclick="cart_open();">장바구니</button>
-    <aside class="basket" id="cart">
+    <button onclick="cart_open()">장바구니</button>
+
+
+    <div id="basket">
         <div class="basket_title">
             <p style="text-align: center; line-height: 50px;">장바구니 목록</p>
         </div>
@@ -110,16 +113,9 @@
         <div><a href="#">예시 2</a></div>
         <div><a href="#">예시 3</a></div>
         <div><a href="#">예시 4</a></div>
-    </aside>
-    <script>
-        let cart1 = document.getElementsByClassName('basket');
-
-        function cart_open() { 
-            cart1.style.backgroundColor = 'lightblue';
-        }
-    </script>
-</body>
+    </div>
     
+</body>
     
 
 </html>
