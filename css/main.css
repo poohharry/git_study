@@ -155,6 +155,7 @@ li label{
     content : "|";
     font-size: small;
     color: rgba(0, 0, 0, 0.3);
+    
 }
 
 
@@ -187,14 +188,14 @@ li label{
 #basket{
    width: 320px; 
    height: 500px; 
-   /* background-color: #eee; */
-   /* margin-left: 100%;
+   background-color: #eee;
    position: fixed;
-   top: 0px; */
+   right: -320px;
+   top: 64.41px;
    
 }
 .basket_title{
     width: 100%; 
-    height: 50px; 
+    height: 30px;
     background-color: #ddd;
 }

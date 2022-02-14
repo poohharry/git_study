@@ -3,10 +3,11 @@
 var cart1 = document.getElementById('basket');
 
 function cart_open() {
-	console.log("버튼1을 누르셨습니다.");
-	cart1.style.backgroundColor = "lightpink";
+	cart1.style.right = "0px";
+	cart1.style.transitionDuration = "1s";
 }
 
 function cart_close() {
-
+	cart1.style.right = "-320px";
+	cart1.style.transitionDuration = "1s";
 }

@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <div style="min-height: 1500px; width: 1200px; margin: auto;">
+    <aside id="basket">
+        <div class="basket_title">
+            <button onclick="cart_close()">닫기</button>
+            <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
+        </div>
         
+        <div><a href="#">예시 1</a></div>
+        <div><a href="#">예시 2</a></div>
+        <div><a href="#">예시 3</a></div>
+        <div><a href="#">예시 4</a></div>
+    </aside>
+    <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
+        <div style="text-align: right; font-size: 8pt;">윗 공간</div>
+        <br>
+        
+
         <header>
             <!-- 메인페이지 이동용 로고 그림 -->
             <div class="logoBox"> <!-- w:150 h:75 -->
@@ -18,34 +32,50 @@
             
             <!-- 네비바  -->
             <nav> <!-- w:800, h:75 -->
-                <ul>
+                <ul class="nav_menu">
                     <li><a href="introduce.html" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
                     <li><a href="map.html" class="nav_display">지도</a> </li>
-                    <li><a href="location.html" class="nav_display">추천관광지</a></li>
-                    <li><a href="restaurant.html" class="nav_display">추천식당</a></li>
-                    <li><a href="rest.html" class="nav_display">추천숙소</a></li>
+                    <li><a href="location.html" class="nav_display">추천관광지</a>
+                        <ul class="caption">
+                            <li><a href="#" class="caption_display">경상도</a></li>
+                            <li><a href="#" class="caption_display">전라도</a></li>
+                            <li><a href="#" class="caption_display">제주도</a></li>
+                            <li><a href="#" class="caption_display">강원도</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="restaurant.html" class="nav_display">추천식당</a>
+                        <ul class="caption">
+                            <li><a href="#" class="caption_display">한식</a></li>
+                            <li><a href="#" class="caption_display">일식</a></li>
+                            <li><a href="#" class="caption_display">중식</a></li>
+                            <li><a href="#" class="caption_display">양식</a></li>
+                            <li><a href="#" class="caption_display">디저트, 카페</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="rest.html" class="nav_display">추천숙소</a>
+                        <ul class="caption">
+                            <li><a href="#" class="caption_display">호텔</a></li>
+                            <li><a href="#" class="caption_display">모텔</a></li>
+                            <li><a href="#" class="caption_display">쉐어하우스</a></li>
+
+                        </ul>
+                    </li>
                 </ul>
-                    <!-- <ul>
-                        <li>한식</li>
-                        <li>일식</li>
-                        <li>중식</li>
-                        <li>양식</li>
-                        <li>디저트, 카페</li>
-                    </ul> -->
             </nav>
-            
-            
+                
+                
             <!-- 로그인 및 장바구니 버튼 -->
             <div class="login_cart">
-                <ul>
-                    <li><a href="login.html">로그인</a></li> <!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                    <li><a href="cart.html">장바구니</a></li>
-                    <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+                <div style="margin: 5px;">
+                    <a href="login.html">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                    <button onclick="cart_open();">장바구니</button>
 
-                </ul>
-                
+                    <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+                </div>
+           
             </div>
-    </header>
+        </header>
         <main class="container" style="height: 100%; width: 100%;">
             <div class="font" id="main_contents">
 
@@ -81,5 +111,6 @@
             </div>
         </footer>
     </div>
+    <script src="../js/cart.js"></script>
 </body>
 </html>
