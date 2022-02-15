@@ -13,11 +13,6 @@
             <button onclick="cart_close()">닫기</button>
             <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
         </div>
-        
-        <div><a href="#">예시 1</a></div>
-        <div><a href="#">예시 2</a></div>
-        <div><a href="#">예시 3</a></div>
-        <div><a href="#">예시 4</a></div>
     </aside>
     <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
         <div style="text-align: right; font-size: 8pt;">윗 공간</div>
@@ -79,12 +74,16 @@
         <main >
             <div class="main_contents">
                 <hr style="clear: left; border: 0; height: 1px; margin: 0 0 5px 0;" color="black">
+
                 <div class="lo_content_box">
                     <div class="lo_photo">
                         <a href="#"><img src="../img/jeju-logo.jpg" width="400px" height="270.25px"></a>
                     </div>
                     <div class="lo_text">
-                        <h3>제주도</h3><br>
+                        <h3 id="Jeju">제주도 </h3><button id="cartBtn" onclick="in_cart('제주도', '../img/jeju-logo.jpg')">장바구니 넣기</button>
+                        <br>
+                        <br>
+                        
                         <p>도시를 벗어나 바닷바람 맞으며 힐링하고 싶을 때</p>
                     </div>
                 </div>
@@ -96,7 +95,8 @@
                         <a href="#"><img src="../img/gangwon-logo.jpg" width="400px" height="270.25px"></a>
                     </div>
                     <div class="lo_text">
-                        <h3>강원도</h3><br>
+                        <h3>강원도</h3><button id="cartBtn" onclick="in_cart('강원도', '../img/gangwon-logo.jpg')">장바구니 넣기</button>
+                        <br><br>
                         <p>산과 바다를 느끼고 싶을 떄</p>
                     </div>
                 </div>
@@ -109,7 +109,8 @@
                         
                     </div>
                     <div class="lo_text">
-                        <h3>경기도</h3><br>
+                        <h3>경기도</h3><button id="cartBtn" onclick="in_cart('경기도', '../img/gyeonggi-logo.jpg')">장바구니 넣기</button>
+                        <br><br>
                         <p>도시속 여행을 원할 때</p>
                     </div>
                 </div>
@@ -120,7 +121,8 @@
                         
                     </div>
                     <div class="lo_text">
-                        <h3>전라도</h3><br>
+                        <h3>전라도</h3><button id="cartBtn" onclick="in_cart('전라도', '../img/Jeolla-logo.jpg')">장바구니 넣기</button>
+                        <br><br>
                         <p>식도락 여행의 진수를 느끼고 싶을때</p>
                     </div>
                 </div>
