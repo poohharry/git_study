@@ -2,8 +2,9 @@
 
 const main_cart = document.getElementById('basket');
 const inner_cart = document.getElementById('inner_basket');
-let cartBox = [];
 let cartNum = 0;
+let cartBox = [];
+let xBox = [];
 
 /* 
 	들어가야할 요소 및 기능들
@@ -44,7 +45,7 @@ function in_cart(lo_name, add) {
 	<div class="inner_cart">
 	<img src="${add}" class="inner_cart_img">
 	${cartBox[cartNum].name}
-	<button onclick="out_cart">X</button>
+	<button onclick="out_cart(${cartNum})">X</button>
 	</div>
 	<hr style="margin: 5px 0;">
 	`;
@@ -53,17 +54,17 @@ function in_cart(lo_name, add) {
 }
 
 // 장바구니에서 뺴기
-function out_cart() {
+function out_cart(num) {
+	cartBox.splice(num, 1);
 
-
-
+	inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
 }
 
 
 // 모든 장바구니 클래스를 합쳐서 리턴
 function all_inner_cart() {
-	let inner_contents;
+	let inner_contents = "";
 	for(let i = 0; i < cartBox.length; i++) {
 		inner_contents += cartBox[i].content;
 	}
