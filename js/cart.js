@@ -1,5 +1,5 @@
 'use strict'
-
+ 
 const main_cart = document.getElementById('basket');
 const inner_cart = document.getElementById('inner_basket');
 let cartNum = 0;      // 클래스 번호
@@ -43,6 +43,14 @@ function cart_close() {                    // 장바구니 닫기
 
 // 장바구니에 담기
 function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
+
+	/* 장바구니 담기 했을경우 중복으로 담는 것을 방지하기 위해 버튼을 비 활성화
+	 	장바구니에서 삭제하면 다시 활성화시켜줄 예정*/
+		  
+	/* let isBtnAble = document.getElementById('cartBtn');
+	isBtnAble.disabled = true; */
+
+
 	cartBox.push(new Cart_content(lo_name, add));
 	
 	//클래스에 들어갈 html코드
@@ -54,7 +62,8 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	</div>
 	<hr style="margin: 5px 0;">`;
 	inner_cart.innerHTML = all_inner_cart();
-	
+	let isBtnAble = document.getElementsByName('InBtn');
+		 isBtnAble[cartNum].disabled = true;
 	cartNum++;
 }// in_cart
 
@@ -66,7 +75,6 @@ function out_cart(num) {
 	for(let i = 0; i < cartBox.length; i++) {
 		cartBox[i].content = changeContent(i, cartBox[i]._img, cartBox[i]._name);
 	}
-	
 	inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
 }// out_cart
