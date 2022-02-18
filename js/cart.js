@@ -47,8 +47,8 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	/* 장바구니 담기 했을경우 중복으로 담는 것을 방지하기 위해 버튼을 비 활성화
 	 	장바구니에서 삭제하면 다시 활성화시켜줄 예정*/
 		  
-	/* let isBtnAble = document.getElementById('cartBtn');
-	isBtnAble.disabled = true; */
+	// let isBtnAble = document.getElementsByName('InBtn');
+	// isBtnAble[cartNum].disabled = true;
 
 
 	cartBox.push(new Cart_content(lo_name, add));
@@ -62,8 +62,6 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	</div>
 	<hr style="margin: 5px 0;">`;
 	inner_cart.innerHTML = all_inner_cart();
-	let isBtnAble = document.getElementsByName('InBtn');
-		 isBtnAble[cartNum].disabled = true;
 	cartNum++;
 }// in_cart
 
@@ -77,6 +75,7 @@ function out_cart(num) {
 	}
 	inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
+	
 }// out_cart
 
 
@@ -89,7 +88,7 @@ function all_inner_cart() {
 	return inner_contents;
 }// all_inner_cart
 
-function changeContent(num, img, name) {
+function changeContent(num, img, name) { // 장바구니에서 뺄 때 마다 클래스의 x버튼 대응을 위해 html코드를 갱신시켜줌
 	let a = `<div class="inner_cart">
 	<img src="${img}" class="inner_cart_img">
 	${name}
