@@ -179,6 +179,9 @@ li label{
    height: 4px; 
    margin: 5px 0 8px 0px;
 }
+.tag_text{
+    color: rgba(32, 32, 32, 0.5);
+}
 
 
 /* 장바구니 */
@@ -211,3 +214,4 @@ h3{
     width: 115px;
     height: 75px;
 }
+
