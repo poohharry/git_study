@@ -22,6 +22,7 @@ class Cart_content {
 	_img;
 	_content;
 	_arrIdx;
+	_count; // 장바구니에 담긴 개수를 표현할 변수
 
 	constructor(name, img) {
 		this._name = name;
@@ -43,13 +44,6 @@ function cart_close() {                    // 장바구니 닫기
 
 // 장바구니에 담기
 function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
-
-	/* 장바구니 담기 했을경우 중복으로 담는 것을 방지하기 위해 버튼을 비 활성화
-	 	장바구니에서 삭제하면 다시 활성화시켜줄 예정*/
-		  
-	// let isBtnAble = document.getElementsByName('InBtn');
-	// isBtnAble[cartNum].disabled = true;
-
 
 	cartBox.push(new Cart_content(lo_name, add));
 	
