@@ -6,6 +6,8 @@ let cartNum = 0;      // 클래스 번호
 let cartBox = [];     // 클래스 배열
 let xBox = [];        // 클래스안에 들어간 x버튼 배열(클래스배열의 인덱스와 x버튼 배열의 인덱스가 같음)
 
+
+
 /* 
 	들어가야할 요소 및 기능들
 
@@ -78,6 +80,7 @@ function all_inner_cart() {
 	let inner_contents = "";
 	for(let i = 0; i < cartBox.length; i++) {
 		inner_contents += cartBox[i].content;
+		sessionStorage.setItem(i, cartBox[i]);
 	}
 	return inner_contents;
 }// all_inner_cart

@@ -1,0 +1,217 @@
+
+*{
+    margin: 0px;
+}
+
+.default_layout{ /* 전체 영역 */
+    width: 1200px; 
+    min-height: 1500px; 
+    margin: 30px auto;
+    /* border: 3px #000 solid; */
+}
+header{
+    width: 100%;
+    height: 75px;
+}
+main{
+    background-color: khaki;
+    min-height: 300px;
+    
+}
+footer{
+    background-color: lightpink;
+    height: 120px;
+    padding: 10px;
+}
+
+/* 헤더 레이아웃 구성*/
+.logoBox{
+    float: left;
+    width: 150px;
+    height: 75px;
+}
+#logo{  /* 로고 이미지 크기 고정 */
+    width: 150px;
+    height: 75px;
+}
+nav{
+    width: 800px;
+    height: 75px;
+    float: left;
+}
+.login_cart{
+    background-color: burlywood;
+    width: 250px;
+    height: 75px;
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    line-height: 65px;
+}
+#main_contents{
+    text-align: center;
+    background-color: #eee;
+    width: 100%;
+    min-height: 200px;
+}
+
+/* 네비바 관련 */
+.nav_menu{           /* 드롭다운 메뉴 전체 크기 */
+    width: 800px;
+    height: 75px;
+}
+.nav_display{       /* 드롭다운 상위 메뉴 1칸 */
+    background-color: cornflowerblue;
+    float: left;
+    width: 160px;
+    height: 75px
+}
+.caption{           /* 드롭다운 하위메늏 */
+    clear: left;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 160px;
+    height: 75px;
+}
+.caption_display{
+    display: block;
+    background-color: skyblue;
+    width: 160px;
+    height: 40px;
+}
+
+.caption li{
+    line-height: 40px;
+    /* overflow: hidden; */
+    /* clear: left; */
+    /* z-index: -5; */
+    
+}
+.nav_menu li:hover .caption{
+    opacity: 1;
+    z-index: 10;
+    overflow: visible;
+    transition-duration: 0.1s;
+}
+nav li:hover ul{
+    position: relative; /* nav li에 갖다 대면 nav li바로 밑으로 오도록 */
+}
+a:link, a:visited {
+    color:black;
+    text-decoration: none;
+}
+nav ul li:hover > a{
+    background-color: rgb(93, 93, 241);
+}
+
+
+
+header ul{
+    list-style-type: none;
+    float: left;
+    list-style-position: inside;
+    padding: 0px;
+}
+header li{
+    float: left;
+    text-align: center;
+    line-height: 75px;
+    font-weight: bold;
+}
+
+/* 로그인 페이지 관련 */
+.loginPage_ul, .loginPage_ul li{
+    list-style-type: none;
+    
+}
+li label{
+    text-align: left;
+    display: inline-block;
+    width: 120px;
+}
+.login_button{
+    float: left; 
+    width: 80px; 
+    height: 50px; 
+    margin: 0px 0px 0px 10px;
+}
+
+@font-face {
+    font-family: "sea_font";
+    src: url("../resource/나눔손글씨\ 세아체.ttf") format("truetype");
+}
+.font{
+    font-family: "sea_font";
+    font-size: x-large;
+}
+
+
+
+.test::before{
+    content : "|";
+    font-size: small;
+    color: rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
+/* 추천관광지 */
+
+.lo_content_box{
+    width: 100%;
+    height: 270.25px;
+}
+.lo_photo{
+    float: left;
+    width: 400px;
+    height: 270.25px;
+}
+.lo_text{
+    float: left; 
+    width: 700px; 
+    margin: 0 10px;
+}
+.lo_hr{
+   clear: left;
+   border: 0;
+   height: 4px; 
+   margin: 5px 0 8px 0px;
+}
+.tag_text{
+    color: rgba(32, 32, 32, 0.5);
+}
+
+
+/* 장바구니 */
+#basket{
+   width: 320px; 
+   height: 500px; 
+   background-color: #eee;
+   position: fixed;
+
+   top: 64.41px;
+   z-index: 30;
+   overflow: auto;
+}
+.basket_title{
+    width: 100%; 
+    height: 30px;
+    background-color: #ddd;
+}
+h3{
+    float: left;
+}
+#cartBtn{
+    margin-left: 10px;
+}
+.inner_cart{
+    width: 303px;
+    height: 75px;
+}
+.inner_cart_img{
+    width: 115px;
+    height: 75px;
+}
+
