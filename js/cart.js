@@ -20,6 +20,7 @@ function test() {
 }
 test();
 
+
 /* 
 	들어가야할 요소 및 기능들
 
