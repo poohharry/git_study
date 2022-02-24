@@ -9,16 +9,12 @@ let sesCon;			  // 세션스토리지 변수
 // console.log(inner_cart.innerHTML);
 let abc = new Array();
 
-function test() {
-	if(sessionStorage.getItem(1) != null) {
-		inner_cart.innerHTML =JSON.parse(sessionStorage.getItem(1));
-	
-	}else{
-		return "";
-	}
+
+if(sessionStorage.getItem(1) != null) {
+	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem(1));
 
 }
-test();
+
 
 
 /* 
@@ -46,7 +42,6 @@ class Cart_content {
 
 }// Cart_content
 
-
 function cart_open() {                     // 장바구니 열기
 	main_cart.style.right = "0px";
 	main_cart.style.transitionDuration = "1s";
@@ -56,6 +51,7 @@ function cart_close() {                    // 장바구니 닫기
 	main_cart.style.right = "-320px";
 	main_cart.style.transitionDuration = "1s";
 }
+
 
 // 장바구니에 담기
 function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
@@ -82,7 +78,9 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	cartNum++;
 }// in_cart
 
+
 // 장바구니에서 뺴기
+// x버튼을 눌러 삭제를 하면 sessionStorage가 텅 비어버리는 오류
 function out_cart(num) {
 
 	cartBox.splice(num, 1);
@@ -92,12 +90,11 @@ function out_cart(num) {
 	}
 	let allCon = all_inner_cart();
 	let jsonVal = JSON.stringify(allCon);
+	// 페이지 이동후 돌아와서 추가를 하는데 세션스토리지에 들어있는것을 무시한채 처음부터 다시 세팅하도록 하는 방식이 문제
 	sessionStorage.setItem(1, jsonVal);
-	console.log(JSON.parse(sessionStorage.getItem(1)));
-	// inner_cart.innerHTML = JSON.parse(sessionStorage.getItem(1));
+	inner_cart.innerHTML = JSON.parse(sessionStorage.getItem(1));
 
-	// inner_cart.innerHTML =JSON.parse(sessionStorage.getItem(1));
-	inner_cart.innerHTML = all_inner_cart();
+	// inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
 	
 }// out_cart
@@ -105,7 +102,7 @@ function out_cart(num) {
 
 // 모든 장바구니 클래스를 합쳐서 리턴
 function all_inner_cart() {
-	let inner_contents = test();
+	let inner_contents = "";
 	for(let i = 0; i < cartBox.length; i++) {
 		inner_contents += cartBox[i].content;
 		sessionStorage.setItem(i, cartBox[i]);
