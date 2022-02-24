@@ -6,19 +6,14 @@ let cartNum = 0;      // 클래스 번호
 let cartBox = [];     // 클래스 배열
 let xBox = [];        // 클래스안에 들어간 x버튼 배열(클래스배열의 인덱스와 x버튼 배열의 인덱스가 같음)
 let sesCon;			  // 세션스토리지 변수
-// console.log(inner_cart.innerHTML);
 let abc = new Array();
 
-function test() {
-	if(sessionStorage.getItem(1) != null) {
-		inner_cart.innerHTML =JSON.parse(sessionStorage.getItem(1));
-	
-	}else{
-		return "";
-	}
+if(sessionStorage.getItem(1) != null) {
+	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem(1));
 
 }
-test();
+
+
 
 /* 
 	들어가야할 요소 및 기능들
@@ -104,7 +99,7 @@ function out_cart(num) {
 
 // 모든 장바구니 클래스를 합쳐서 리턴
 function all_inner_cart() {
-	let inner_contents = test();
+	let inner_contents = "";
 	for(let i = 0; i < cartBox.length; i++) {
 		inner_contents += cartBox[i].content;
 		sessionStorage.setItem(i, cartBox[i]);
