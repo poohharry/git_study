@@ -3,7 +3,7 @@
 const main_cart = document.getElementById('basket');
 const inner_cart = document.getElementById('inner_basket');
 let cartNum = 0;      // 클래스 번호
-let cartBox = [];     // 클래스 배열
+let cartBox = [];     // 클래스 배열    -> 세션스토리지 스캔한걸로 초기화?
 let xBox = [];        // 클래스안에 들어간 x버튼 배열(클래스배열의 인덱스와 x버튼 배열의 인덱스가 같음)
 let sesCon;			  // 세션스토리지 변수
 // console.log(inner_cart.innerHTML);
@@ -57,6 +57,9 @@ function cart_close() {                    // 장바구니 닫기
 
 // 장바구니에 담기
 function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
+
+	// sessionStorage.getItem('jInner');
+	// 스캔 -> 세션에 있는 카트박스 먼저 채우기 -> ?
 
 	cartBox.push(new Cart_content(lo_name, add));
 	
