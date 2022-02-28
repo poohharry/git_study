@@ -4,18 +4,11 @@ const main_cart = document.getElementById('basket');
 const inner_cart = document.getElementById('inner_basket');
 let cartNum = 0;      // 클래스 번호
 let cartBox = [];     // 클래스 배열
-let xBox = [];        // 클래스안에 들어간 x버튼 배열(클래스배열의 인덱스와 x버튼 배열의 인덱스가 같음)
-let sesCon;			  // 세션스토리지 변수
-// console.log(inner_cart.innerHTML);
-let abc = new Array();
-
 
 if(sessionStorage.getItem('jInner') != null) {
 	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem('jInner'));
 
 }
-
-
 
 /* 
 	들어가야할 요소 및 기능들
@@ -34,10 +27,6 @@ class Cart_content {
 	content;
 	arrIdx;
 
-	// 장바구니에 담긴 개수를 표현할 변수
-	count;
-	
-	
 	constructor(_name, _img) {
 		this.name = _name;
 		this.img = _img;
@@ -82,7 +71,6 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 
 
 // 장바구니에서 뺴기
-// x버튼을 눌러 삭제를 하면 sessionStorage가 텅 비어버리는 오류
 function out_cart(num) {
 
 	cartBox.splice(num, 1);
@@ -125,3 +113,4 @@ function changeContent(num, img, name) { // 장바구니에서 뺄 때 마다 �
 	<hr style="margin: 5px 0;">`;
 	return a;
 }
+
