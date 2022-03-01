@@ -60,6 +60,7 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 
 	// sessionStorage.getItem('jInner');
 	// 스캔 -> 세션에 있는 카트박스 먼저 채우기 -> ?
+	// 호출할때마다 세션 스캔은 너무 비효율적.
 
 	cartBox.push(new Cart_content(lo_name, add));
 	
