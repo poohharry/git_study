@@ -3,7 +3,6 @@
 const main_cart = document.getElementById('basket');			// 사이드 장바구니 전체
 const inner_cart = document.getElementById('inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
 let cartNum = 0;      // 클래스 번호
-let cartBox = [];     // 클래스 배열
 
 if(sessionStorage.getItem('jInner') != null) {
 	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem('jInner'));
