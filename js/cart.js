@@ -30,7 +30,7 @@ if(sessionStorage.getItem('jInner') != null) {
 
 	name
 	photo
-	a태그를 통해 상세정보 보기 가능
+	a태그를 통해 상세정보 보기 가능  
 	장바구니에서 삭제하는 버튼
 */
 
