@@ -21,6 +21,7 @@ if(sessionStorage.getItem('cartClassKey') == undefined) {
 // } 
 
 
+
 if(sessionStorage.getItem('jInner') != null) {
 	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem('jInner'));
 }
