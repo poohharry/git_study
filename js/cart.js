@@ -2,16 +2,27 @@
  
 const main_cart = document.getElementById('basket');			// 사이드 장바구니 전체
 const inner_cart = document.getElementById('inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
-let cartNum = 0;      // 클래스 번호
+
 let cartBox ;
 // let cartBox = sessionStorage.getItem('cartClassKey');	  // 클래스 배열
 
-
 // 세션스토리지가 비어있으면 공백의 cartBox를, 하나라도 차 있다면 세션스토리지에서 갖고온 값을 디폴트로
-if(sessionStorage.getItem('cartClassKey') == undefined) {
+if(sessionStorage.cartClassKey == undefined) {
 	cartBox = [];
+	console.log('빈 배열 생성');
 }else {
 	cartBox = JSON.parse(sessionStorage.getItem('cartClassKey'));
+	inner_cart.innerHTML =JSON.parse(sessionStorage.jInner);
+	console.log('배열 불러옴');
+
+}
+
+let cartNum = cartBox.length;      // 클래스 번호
+
+
+for(let i = 0; i < cartBox.length; i++) {
+	console.log(cartBox[i].content);
+
 }
 
 // if(sessionStorage.getItem('cartClassKey') != null) {
@@ -19,11 +30,6 @@ if(sessionStorage.getItem('cartClassKey') == undefined) {
 // } else{
 // 	cartBox = [];	
 // } 
-
-
-if(sessionStorage.getItem('jInner') != null) {
-	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem('jInner'));
-}
 
 /* 
 	들어가야할 요소 및 기능들
@@ -53,7 +59,6 @@ function cart_open() {                     // 장바구니 열기
 	main_cart.style.right = "0px";
 	main_cart.style.transitionDuration = "1s";
 }
-
 function cart_close() {                    // 장바구니 닫기
 	main_cart.style.right = "-320px";
 	main_cart.style.transitionDuration = "1s";
@@ -68,12 +73,6 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	// 호출할때마다 세션 스캔은 너무 비효율적.
 
 	cartBox.push(new Cart_content(lo_name, add));
-	sessionStorage.setItem("cartClassKey", JSON.stringify(cartBox));	// 배열에 새로운 클래스 추가 이후 바로 클래스 배열을
-																		// JSON.stringify로 문자열화 시킨뒤, 세션스토리지에 저장.
-																		/* [{name: "제주도", img: "../img/jeju-logo.jpg"}]
-																			0: {name: "제주도", img: "../img/jeju-logo.jpg"}
-																				img: "../img/jeju-logo.jpg"
-																				name: "제주도" */
 
 	//클래스에 들어갈 html코드
 	cartBox[cartNum].content = 
@@ -93,6 +92,13 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 
 	// inner_cart.innerHTML = all_inner_cart();
 	cartNum++;
+
+	sessionStorage.cartClassKey = JSON.stringify(cartBox);	// 배열에 새로운 클래스 추가 이후 바로 클래스 배열을
+																		// JSON.stringify로 문자열화 시킨뒤, 세션스토리지에 저장.
+																		/* [{name: "제주도", img: "../img/jeju-logo.jpg"}]
+																			0: {name: "제주도", img: "../img/jeju-logo.jpg"}
+																				img: "../img/jeju-logo.jpg"
+																				name: "제주도" */
 }// in_cart
 
 
@@ -125,6 +131,7 @@ function out_cart(num) {
 function all_inner_cart() {
 	let inner_contents = "";
 	for(let i = 0; i < cartBox.length; i++) {
+
 		inner_contents += cartBox[i].content;
 		sessionStorage.setItem('jInner', cartBox[i]);
 	}
