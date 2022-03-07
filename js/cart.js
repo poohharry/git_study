@@ -3,12 +3,12 @@
 const main_cart = document.getElementById('basket');			// 사이드 장바구니 전체
 const inner_cart = document.getElementById('inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
 let cartNum = 0;      // 클래스 번호
-let cartBox;
+let cartBox ;
 // let cartBox = sessionStorage.getItem('cartClassKey');	  // 클래스 배열
 
 
 // 세션스토리지가 비어있으면 공백의 cartBox를, 하나라도 차 있다면 세션스토리지에서 갖고온 값을 디폴트로
-if(sessionStorage.hasOwnProperty('cartClassKey') === false) {
+if(sessionStorage.getItem('cartClassKey') == undefined) {
 	cartBox = [];
 }else {
 	cartBox = JSON.parse(sessionStorage.getItem('cartClassKey'));
@@ -19,6 +19,7 @@ if(sessionStorage.hasOwnProperty('cartClassKey') === false) {
 // } else{
 // 	cartBox = [];	
 // } 
+
 
 
 if(sessionStorage.getItem('jInner') != null) {
