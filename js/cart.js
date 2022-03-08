@@ -114,12 +114,12 @@ function out_cart(num) {
 	let jsonVal = JSON.stringify(allCon);
 
 	// 페이지 이동후 돌아와서 추가를 하는데 세션스토리지에 들어있는것을 무시한채 처음부터 다시 세팅하도록 하는 방식이 문제
-	sessionStorage.setItem('jInner', jsonVal);
+	sessionStorage.jInner = jsonVal;
 	inner_cart.innerHTML = JSON.parse(sessionStorage.getItem('jInner'));
 
 	// inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
-	
+	sessionStorage.cartClassKey = JSON.stringify(cartBox);
 }// out_cart
 
 
