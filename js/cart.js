@@ -17,6 +17,8 @@ if(sessionStorage.cartClassKey == undefined) {
 
 }
 
+
+
 let cartNum = cartBox.length;      // 클래스 번호
 
 
