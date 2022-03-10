@@ -203,7 +203,7 @@ li label{
 h3{
     float: left;
 }
-#cartBtn{
+.cartBtn{
     margin-left: 10px;
 }
 .inner_cart{

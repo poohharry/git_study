@@ -31,11 +31,12 @@ class Cart_content {
 	name;
 	img;          
 	content;
-	arrIdx;
-
-	constructor(_name, _img) {
+	btnid;
+	
+	constructor(_name, _img, _id) {
 		this.name = _name;
 		this.img = _img;
+		this.btnid = _id;
 	}
 
 }// Cart_content
@@ -51,20 +52,20 @@ function cart_close() {                    // 장바구니 닫기
 
 
 // 장바구니에 담기
-function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
+function in_cart(lo_name, add, id) {   // (지역이름, 이미지 주소)
+	// $(`#${id}`).attr("disabled", true);
+	document.getElementById(`${id}`).disabled = true;
+	
+	console.log(document.getElementById(`${id}`));
 
-	// sessionStorage.getItem('jInner');
-	// 스캔 -> 세션에 있는 카트박스 먼저 채우기 -> ?
-	// 호출할때마다 세션 스캔은 너무 비효율적.
-
-	cartBox.push(new Cart_content(lo_name, add));
+	cartBox.push(new Cart_content(lo_name, add, id));
 
 	//클래스에 들어갈 html코드
 	cartBox[cartNum].content = 
 	`<div class="inner_cart">
 	<img src="${add}" class="inner_cart_img">
 	${cartBox[cartNum].name}
-	<button class="Xbutton" onclick="out_cart(${cartNum})">X</button>
+	<button class="Xbutton" onclick="out_cart(${cartNum}, '${id}')">X</button>
 	</div>
 	<hr style="margin: 5px 0;">`;
 
@@ -84,16 +85,22 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 																			0: {name: "제주도", img: "../img/jeju-logo.jpg"}
 																				img: "../img/jeju-logo.jpg"
 																				name: "제주도" */
-}// in_cart
+
+	for(let i = 0; i < cartBox.length; i++) {
+		console.log(cartBox[i].btnid);
+	}
+}// in_cart 
 
 
 // 장바구니에서 뺴기
-function out_cart(num) {
-
+function out_cart(num, id) {
+	
+	// console.log(document.getElementById(`${id}`)); -> null
+	document.getElementById(`${id}`).disabled = false;
 	cartBox.splice(num, 1);
 
 	for(let i = 0; i < cartBox.length; i++) {
-		cartBox[i].content = changeContent(i, cartBox[i].img, cartBox[i].name);
+		cartBox[i].content = changeContent(i, cartBox[i].img, cartBox[i].name, cartBox[i].btnid);
 	}
 	let allCon = all_inner_cart();
 	let jsonVal = JSON.stringify(allCon);
@@ -123,13 +130,12 @@ function all_inner_cart() {
 	return inner_contents;
 }// all_inner_cart
 
-function changeContent(num, img, name) { // 장바구니에서 뺄 때 마다 클래스의 x버튼 대응을 위해 html코드를 갱신시켜줌
+function changeContent(num, img, name, id) { // 장바구니에서 뺄 때 마다 클래스의 x버튼 대응을 위해 html코드를 갱신시켜줌
 	let a = `<div class="inner_cart">
 	<img src="${img}" class="inner_cart_img">
 	${name}
-	<button class="Xbutton" onclick="out_cart(${num})">X</button>
+	<button class="Xbutton" onclick="out_cart(${num}, ${id})">X</button>
 	</div>
 	<hr style="margin: 5px 0;">`;
 	return a;
 }
-
