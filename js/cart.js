@@ -1,8 +1,7 @@
 'use strict'
  
-const main_cart = document.getElementById('basket');			// 사이드 장바구니 전체
-const inner_cart = document.getElementById('inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
-
+const main_cart = $('#basket');			// 사이드 장바구니 전체
+const inner_cart = $('#inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
 let cartBox ;
 // let cartBox = sessionStorage.getItem('cartClassKey');	  // 클래스 배열
 
@@ -11,27 +10,11 @@ if(sessionStorage.cartClassKey == undefined) {
 	cartBox = [];
 	console.log('빈 배열 생성');
 }else {
-	cartBox = JSON.parse(sessionStorage.getItem('cartClassKey'));
-	inner_cart.innerHTML =JSON.parse(sessionStorage.jInner);
+	cartBox = JSON.parse(sessionStorage.cartClassKey);
+	inner_cart.html(JSON.parse(sessionStorage.jInner));
 	console.log('배열 불러옴');
-
 }
-
-
-
 let cartNum = cartBox.length;      // 클래스 번호
-
-
-for(let i = 0; i < cartBox.length; i++) {
-	console.log(cartBox[i].content);
-
-}
-
-// if(sessionStorage.getItem('cartClassKey') != null) {
-// 	cartBox = JSON.parse(sessionStorage.getItem('cartClassKey'));
-// } else{
-// 	cartBox = [];	
-// } 
 
 /* 
 	들어가야할 요소 및 기능들
@@ -58,12 +41,12 @@ class Cart_content {
 }// Cart_content
 
 function cart_open() {                     // 장바구니 열기
-	main_cart.style.right = "0px";
-	main_cart.style.transitionDuration = "1s";
+	main_cart.css('right', "0px");
+	main_cart.css('transitionDuration', "1s");
 }
 function cart_close() {                    // 장바구니 닫기
-	main_cart.style.right = "-320px";
-	main_cart.style.transitionDuration = "1s";
+	main_cart.css('right', "-320px");
+	main_cart.css('transitionDuration', "1s");
 }
 
 
@@ -89,8 +72,8 @@ function in_cart(lo_name, add) {   // (지역이름, 이미지 주소)
 	let allCon = "";
 	allCon = all_inner_cart();
 	let jsonVal = JSON.stringify(allCon);
-	sessionStorage.setItem('jInner', jsonVal);
-	inner_cart.innerHTML =JSON.parse(sessionStorage.getItem('jInner'));
+	sessionStorage.jInner = jsonVal;
+	inner_cart.html(JSON.parse(sessionStorage.jInner));
 
 	// inner_cart.innerHTML = all_inner_cart();
 	cartNum++;
@@ -117,7 +100,7 @@ function out_cart(num) {
 
 	// 페이지 이동후 돌아와서 추가를 하는데 세션스토리지에 들어있는것을 무시한채 처음부터 다시 세팅하도록 하는 방식이 문제
 	sessionStorage.jInner = jsonVal;
-	inner_cart.innerHTML = JSON.parse(sessionStorage.getItem('jInner'));
+	inner_cart.html(JSON.parse(sessionStorage.jInner));
 
 	// inner_cart.innerHTML = all_inner_cart();
 	cartNum--;
@@ -135,7 +118,7 @@ function all_inner_cart() {
 	for(let i = 0; i < cartBox.length; i++) {
 
 		inner_contents += cartBox[i].content;
-		sessionStorage.setItem('jInner', cartBox[i]);
+		sessionStorage.jInner = cartBox[i];
 	}
 	return inner_contents;
 }// all_inner_cart
