@@ -6,7 +6,7 @@
 .default_layout{ /* 전체 영역 */
     width: 1200px; 
     min-height: 1500px; 
-    margin: 30px auto;
+    margin: 0px auto;
     /* border: 3px #000 solid; */
 }
 header{

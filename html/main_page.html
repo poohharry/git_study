@@ -17,91 +17,99 @@
 
 </head>
 <body>
+    <div id="bg" style="margin: 0;">
+
         <!-- 장바구니 -->
-    <aside id="basket">
-        <div class="basket_title">
-            <button onclick="cart_close()">닫기</button>
-            <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
-        </div>
-        <div id="inner_basket">
-
-        </div>
-
-    </aside>
-    <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
-        <div style="text-align: right; font-size: 8pt;">윗 공간</div>
-        <br>
-
-        <header>
-            <!-- 메인페이지 이동용 로고 그림 -->
-            <div class="logoBox"> <!-- w:150 h:75 -->
-                <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
+        <aside id="basket">
+            <div class="basket_title">
+                <button onclick="cart_close()">닫기</button>
+                <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
             </div>
-            
-            <!-- 네비바  -->
-            <nav> <!-- w:800, h:75 -->
-                <ul class="nav_menu">
-                    <li><a href="introduce.html" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
-                    <li><a href="map.html" class="nav_display">지도</a> </li>
-                    <li><a href="location.html" class="nav_display">추천관광지</a>
-                        <ul class="caption">
-                            <li><a href="#" class="caption_display">경상도</a></li>
-                            <li><a href="#" class="caption_display">전라도</a></li>
-                            <li><a href="#" class="caption_display">제주도</a></li>
-                            <li><a href="#" class="caption_display">강원도</a></li>
-                        </ul>
-                    </li>
+            <div id="inner_basket">
 
-                    <li><a href="restaurant.html" class="nav_display">추천식당</a>
-                        <ul class="caption">
-                            <li><a href="#" class="caption_display">한식</a></li>
-                            <li><a href="#" class="caption_display">일식</a></li>
-                            <li><a href="#" class="caption_display">중식</a></li>
-                            <li><a href="#" class="caption_display">양식</a></li>
-                            <li><a href="#" class="caption_display">디저트, 카페</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="rest.html" class="nav_display">추천숙소</a>
-                        <ul class="caption">
-                            <li><a href="#" class="caption_display">호텔</a></li>
-                            <li><a href="#" class="caption_display">모텔</a></li>
-                            <li><a href="#" class="caption_display">쉐어하우스</a></li>
+            </div>
 
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-                
-                
-            <!-- 로그인 및 장바구니 버튼 -->
-            <div class="login_cart">
-                <div style="margin: 5px;">
-                    <a href="login.html">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                    <button onclick="cart_open();">장바구니</button>
+        </aside>
+        <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
+            <div style="text-align: right; font-size: 8pt;">윗 공간</div>
+            <br>
 
-                    <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+            <header>
+                <!-- 메인페이지 이동용 로고 그림 -->
+                <div class="logoBox"> <!-- w:150 h:75 -->
+                    <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
                 </div>
-           
-            </div>
-        </header>
-        
-        <!-- 메인 콘텐츠 -->
+                
+                <!-- 네비바  -->
+                <nav> <!-- w:800, h:75 -->
+                    <ul class="nav_menu">
+                        <li><a href="introduce.html" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
+                        <li><a href="map.html" class="nav_display">지도</a> </li>
+                        <li><a href="location.html" class="nav_display">추천관광지</a>
+                            <ul class="caption">
+                                <li><a href="#" class="caption_display">경상도</a></li>
+                                <li><a href="#" class="caption_display">전라도</a></li>
+                                <li><a href="#" class="caption_display">제주도</a></li>
+                                <li><a href="#" class="caption_display">강원도</a></li>
+                            </ul>
+                        </li>
 
-        <main>
-           <img src="../img/main_gangwon.png" width="100%" style="z-index: -10;">
-           <div>test</div>
-           <img src="../img/main_gyeong.png" width="100%" style="z-index: -10;">
-        </main>
-    
-        <!-- 기타 정보들 -->
-        <footer>
-            <div>
-                <p><b>Help : </b> <a href="#">010-4240-3631</a> <span class="test"> poohharry@naver.com</span></p>
-                <p><b>Address : </b> 부산광역시 부산진구 전포동 892-21</p>
-                <p><b>Donation : </b> 기업은행 980-006030-01-019</p>
-            </div>
-        </footer>
-    </div> 
+                        <li><a href="restaurant.html" class="nav_display">추천식당</a>
+                            <ul class="caption">
+                                <li><a href="#" class="caption_display">한식</a></li>
+                                <li><a href="#" class="caption_display">일식</a></li>
+                                <li><a href="#" class="caption_display">중식</a></li>
+                                <li><a href="#" class="caption_display">양식</a></li>
+                                <li><a href="#" class="caption_display">디저트, 카페</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="rest.html" class="nav_display">추천숙소</a>
+                            <ul class="caption">
+                                <li><a href="#" class="caption_display">호텔</a></li>
+                                <li><a href="#" class="caption_display">모텔</a></li>
+                                <li><a href="#" class="caption_display">쉐어하우스</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                    
+                    
+                <!-- 로그인 및 장바구니 버튼 -->
+                <div class="login_cart">
+                    <div style="margin: 5px;">
+                        <a href="login.html">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                        <button onclick="cart_open();">장바구니</button>
+
+                        <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+                    </div>
+            
+                </div>
+            </header>
+            
+            <!-- 메인 콘텐츠 -->
+
+            <main>
+                <div class="bgi1">
+                    <img src="../img/main_gangwon.png" width="1200px">
+                    <div class="bgi1_text">test
+                        
+                    </div>
+                </div>
+            <!-- <img src="../img/main_gyeong.png" width="100%" style="z-index: -10;"> -->
+            </main>
+        
+            <!-- 기타 정보들 -->
+            <footer>
+                <div>
+                    <p><b>Help : </b> <a href="#">010-4240-3631</a> <span class="test"> poohharry@naver.com</span></p>
+                    <p><b>Address : </b> 부산광역시 부산진구 전포동 892-21</p>
+                    <p><b>Donation : </b> 기업은행 980-006030-01-019</p>
+                </div>
+            </footer>
+        </div> 
+    </div>
     <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

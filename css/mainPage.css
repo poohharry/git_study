@@ -1,5 +1,22 @@
-/* body{
-    background-image: url(../img/main_gangwon.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-} */
+
+*{
+    margin: 0px;
+}
+
+.bgi1{
+    position: relative;
+    /* width: 1200px; */
+    /* z-index: -5; */
+}
+
+.bgi1_text{
+    color: yellow;
+    font-size: 24pt;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+}
+body{
+    background-color: lightyellow;
+
+}

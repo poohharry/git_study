@@ -7,6 +7,8 @@
     <title>추천관광지</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="#">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -63,8 +65,8 @@
                     </li>
                 </ul>
             </nav>
-                
-                
+            
+            
             <!-- 로그인 및 장바구니 버튼 -->
             <div class="login_cart">
                 <div style="margin: 5px;">
@@ -80,7 +82,7 @@
             <div class="main_contents">
                 <hr style="clear: left; border: 0; height: 1px; margin: 0 0 5px 0;" color="black">
 
-                <div class="lo_content_box">
+                <div data-aos="fade-out" class="lo_content_box">
                     <div class="lo_photo">
                         <a href="#"><img src="../img/jeju-logo.jpg" width="400px" height="270.25px"></a>
                     </div>
@@ -97,7 +99,7 @@
 
                 <hr class="lo_hr" color="black">
                 
-                <div class="lo_content_box">
+                <div data-aos="fade-out" class="lo_content_box">
                     <div class="lo_photo">
                         <a href="#"><img src="../img/gangwon-logo.jpg" width="400px" height="270.25px"></a>
                     </div>
@@ -115,7 +117,7 @@
                 
                 <hr class="lo_hr" color="black">
                 
-                <div class="lo_content_box">
+                <div data-aos="fade-out" class="lo_content_box">
                     <div class="lo_photo">
                         <a href="#"><img src="../img/gyeonggi-logo.jpg" width="400px" height="270.25px"></a>
                         
@@ -131,7 +133,7 @@
                     </div>
                 </div>
                 <hr class="lo_hr" color="black">
-                <div class="lo_content_box">
+                <div data-aos="fade-out" class="lo_content_box">
                     <div class="lo_photo">
                         <a href="#"><img src="../img/Jeolla-logo.jpg" width="400px" height="270.25px"></a>
                         
@@ -156,6 +158,10 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        AOS.init();
+    </script>
     <script defer src="../js/cart.js"></script>
 </body>
 </html>
