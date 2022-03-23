@@ -10,5 +10,9 @@
 */
 #bg{
     background: url("../img/main_gangwon.png");
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100%;
+    /* background-position: ; */
+    background-repeat: no-repeat;
+    transition: 0.3s;
 }
