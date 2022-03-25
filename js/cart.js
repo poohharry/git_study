@@ -56,8 +56,7 @@ function cart_close() {                    // 장바구니 닫기
 // 장바구니에 담기
 function in_cart(lo_name, add, id) {   // (지역이름, 이미지 주소)
 	// $(`#${id}`).attr("disabled", true);
-	document.getElementById(`${id}`).disabled = true;
-	
+	// document.getElementById(`${id}`).disabled = true;
 	console.log(document.getElementById(`${id}`));
 
 	cartBox.push(new Cart_content(lo_name, add, id));
@@ -98,7 +97,7 @@ function in_cart(lo_name, add, id) {   // (지역이름, 이미지 주소)
 function out_cart(num, id) {
 	
 	// console.log(document.getElementById(`${id}`)); -> null
-	document.getElementById(`${id}`).disabled = false;
+	// document.getElementById(`${id}`).disabled = false; 
 	cartBox.splice(num, 1);
 
 	for(let i = 0; i < cartBox.length; i++) {
