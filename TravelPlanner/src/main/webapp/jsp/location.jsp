@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -29,15 +31,15 @@
         <header>
             <!-- 메인페이지 이동용 로고 그림 -->
             <div class="logoBox"> <!-- w:150 h:75 -->
-                <a href="main_page.html"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
+                <a href="mainPage.jsp"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
             </div>
             
             <!-- 네비바  -->
             <nav> <!-- w:800, h:75 -->
                 <ul class="nav_menu">
-                    <li><a href="introduce.html" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
-                    <li><a href="map.html" class="nav_display">지도</a> </li>
-                    <li><a href="location.html" class="nav_display">추천관광지</a>
+                    <li><a href="introduce.jsp" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
+                    <li><a href="map.jsp" class="nav_display">지도</a> </li>
+                    <li><a href="location.jsp" class="nav_display">추천관광지</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">경상도</a></li>
                             <li><a href="#" class="caption_display">전라도</a></li>
@@ -46,7 +48,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="restaurant.html" class="nav_display">추천식당</a>
+                    <li><a href="restaurant.jsp" class="nav_display">추천식당</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">한식</a></li>
                             <li><a href="#" class="caption_display">일식</a></li>
@@ -55,7 +57,7 @@
                             <li><a href="#" class="caption_display">디저트, 카페</a></li>
                         </ul>
                     </li>
-                    <li><a href="rest.html" class="nav_display">추천숙소</a>
+                    <li><a href="rest.jsp" class="nav_display">추천숙소</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">호텔</a></li>
                             <li><a href="#" class="caption_display">모텔</a></li>
@@ -70,7 +72,7 @@
             <!-- 로그인 및 장바구니 버튼 -->
             <div class="login_cart">
                 <div style="margin: 5px;">
-                    <a href="login.html">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                    <a href="login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                     <button onclick="cart_open();">장바구니</button>
 
                     <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
@@ -106,7 +108,7 @@
                     <div class="lo_text">
                         <h3>강원도</h3><button id="gangwon" class="cartBtn" onclick="in_cart('강원도', '../img/gangwon-logo.jpg')">장바구니 넣기</button>
                         <br><br>
-                        <p>산과 바다를 느끼고 싶을 떄</p>
+                        <p>산과 바다를 느끼고 싶을 때</p>
                         <br><br>
                         <div class="tag_text">
                             tag : 산, 해안도로
