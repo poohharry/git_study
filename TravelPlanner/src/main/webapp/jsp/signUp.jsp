@@ -1,66 +1,66 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>È¸¿ø°¡ÀÔ</title>
+    <title>íšŒì›ê°€ìž…</title>
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <aside id="basket">
         <div class="basket_title">
-            <button onclick="cart_close()">´Ý±â</button>
-            <span style="text-align: center; line-height: 30px;">Àå¹Ù±¸´Ï ¸ñ·Ï</span>
+            <button onclick="cart_close()">ë‹«ê¸°</button>
+            <span style="text-align: center; line-height: 30px;">ìž¥ë°”êµ¬ë‹ˆ ëª©ë¡</span>
         </div>
         
-        <div><a href="#">¿¹½Ã 1</a></div>
-        <div><a href="#">¿¹½Ã 2</a></div>
-        <div><a href="#">¿¹½Ã 3</a></div>
-        <div><a href="#">¿¹½Ã 4</a></div>
+        <div><a href="#">ì˜ˆì‹œ 1</a></div>
+        <div><a href="#">ì˜ˆì‹œ 2</a></div>
+        <div><a href="#">ì˜ˆì‹œ 3</a></div>
+        <div><a href="#">ì˜ˆì‹œ 4</a></div>
     </aside>
-    <div class="default_layout"> <!-- w:1200 h:ÃÖ¼Ò 1500 -->
-        <div style="text-align: right; font-size: 8pt;">À­ °ø°£</div>
+    <div class="default_layout"> <!-- w:1200 h:ìµœì†Œ 1500 -->
+        <div style="text-align: right; font-size: 8pt;">ìœ— ê³µê°„</div>
         <br>
         
 
         <header>
-            <!-- ¸ÞÀÎÆäÀÌÁö ÀÌµ¿¿ë ·Î°í ±×¸² -->
+            <!-- ë©”ì¸íŽ˜ì´ì§€ ì´ë™ìš© ë¡œê³  ê·¸ë¦¼ -->
             <div class="logoBox"> <!-- w:150 h:75 -->
-                <a href="mainPage.jsp"><img src="../img/logo.jpg" alt="·Î°í" id="logo"></a> 
+                <a href="mainPage.jsp"><img src="../img/logo.jpg" alt="ë¡œê³ " id="logo"></a> 
             </div>
             
-            <!-- ³×ºñ¹Ù  -->
+            <!-- ë„¤ë¹„ë°”  -->
             <nav> <!-- w:800, h:75 -->
                 <ul class="nav_menu">
-                    <li><a href="introduce.jsp" class="nav_display">¼Ò°³</a></li> <!-- w:160 h:75 -->
-                    <li><a href="map.jsp" class="nav_display">Áöµµ</a> </li>
-                    <li><a href="location.jsp" class="nav_display">ÃßÃµ°ü±¤Áö</a>
+                    <li><a href="introduce.jsp" class="nav_display">ì†Œê°œ</a></li> <!-- w:160 h:75 -->
+                    <li><a href="map.jsp" class="nav_display">ì§€ë„</a> </li>
+                    <li><a href="location.jsp" class="nav_display">ì¶”ì²œê´€ê´‘ì§€</a>
                         <ul class="caption">
-                            <li><a href="#" class="caption_display">°æ»óµµ</a></li>
-                            <li><a href="#" class="caption_display">Àü¶óµµ</a></li>
-                            <li><a href="#" class="caption_display">Á¦ÁÖµµ</a></li>
-                            <li><a href="#" class="caption_display">°­¿øµµ</a></li>
+                            <li><a href="#" class="caption_display">ê²½ìƒë„</a></li>
+                            <li><a href="#" class="caption_display">ì „ë¼ë„</a></li>
+                            <li><a href="#" class="caption_display">ì œì£¼ë„</a></li>
+                            <li><a href="#" class="caption_display">ê°•ì›ë„</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="restaurant.jsp" class="nav_display">ÃßÃµ½Ä´ç</a>
+                    <li><a href="restaurant.jsp" class="nav_display">ì¶”ì²œì‹ë‹¹</a>
                         <ul class="caption">
-                            <li><a href="#" class="caption_display">ÇÑ½Ä</a></li>
-                            <li><a href="#" class="caption_display">ÀÏ½Ä</a></li>
-                            <li><a href="#" class="caption_display">Áß½Ä</a></li>
-                            <li><a href="#" class="caption_display">¾ç½Ä</a></li>
-                            <li><a href="#" class="caption_display">µðÀúÆ®, Ä«Æä</a></li>
+                            <li><a href="#" class="caption_display">í•œì‹</a></li>
+                            <li><a href="#" class="caption_display">ì¼ì‹</a></li>
+                            <li><a href="#" class="caption_display">ì¤‘ì‹</a></li>
+                            <li><a href="#" class="caption_display">ì–‘ì‹</a></li>
+                            <li><a href="#" class="caption_display">ë””ì €íŠ¸, ì¹´íŽ˜</a></li>
                         </ul>
                     </li>
-                    <li><a href="rest.jsp" class="nav_display">ÃßÃµ¼÷¼Ò</a>
+                    <li><a href="rest.jsp" class="nav_display">ì¶”ì²œìˆ™ì†Œ</a>
                         <ul class="caption">
-                            <li><a href="#" class="caption_display">È£ÅÚ</a></li>
-                            <li><a href="#" class="caption_display">¸ðÅÚ</a></li>
-                            <li><a href="#" class="caption_display">½¦¾îÇÏ¿ì½º</a></li>
+                            <li><a href="#" class="caption_display">í˜¸í…”</a></li>
+                            <li><a href="#" class="caption_display">ëª¨í…”</a></li>
+                            <li><a href="#" class="caption_display">ì‰ì–´í•˜ìš°ìŠ¤</a></li>
 
                         </ul>
                     </li>
@@ -68,13 +68,13 @@
             </nav>
                 
                 
-            <!-- ·Î±×ÀÎ ¹× Àå¹Ù±¸´Ï ¹öÆ° -->
+            <!-- ë¡œê·¸ì¸ ë° ìž¥ë°”êµ¬ë‹ˆ ë²„íŠ¼ -->
             <div class="login_cart">
                 <div style="margin: 5px;">
-                    <a href="login.jsp">·Î±×ÀÎ</a><!-- ·Î±×ÀÎÆäÀÌÁö·Î ÀÌµ¿ÇÏ±â À§ÇÑ ·Î±×ÀÎ ÇÏÀÌÆÛ¸µÅ© -->
-                    <button onclick="cart_open();">Àå¹Ù±¸´Ï</button>
+                    <a href="login.jsp">ë¡œê·¸ì¸</a><!-- ë¡œê·¸ì¸íŽ˜ì´ì§€ë¡œ ì´ë™í•˜ê¸° ìœ„í•œ ë¡œê·¸ì¸ í•˜ì´í¼ë§í¬ -->
+                    <button onclick="cart_open();">ìž¥ë°”êµ¬ë‹ˆ</button>
 
-                    <!-- ÆäÀÌÁö ÀÌµ¿ÀÌ ¾Æ´Ñ ¹öÆ°À» ´­·¶À» °æ¿ì »çÀÌµå¹Ù·Î ³ª¿Àµµ·Ï ¸¸µé ¿¹Á¤-->
+                    <!-- íŽ˜ì´ì§€ ì´ë™ì´ ì•„ë‹Œ ë²„íŠ¼ì„ ëˆŒë €ì„ ê²½ìš° ì‚¬ì´ë“œë°”ë¡œ ë‚˜ì˜¤ë„ë¡ ë§Œë“¤ ì˜ˆì •-->
                 </div>
            
             </div>
@@ -82,35 +82,35 @@
         <main class="container" style="height: 100%; width: 100%;">
             <div class="font" id="main_contents">
 
-                <form style="margin: 30px;">
-                    <!-- °èÁ¤Á¤º¸ -->
+                <form name="signUpFrm" method="post" action="signUpProc.jsp" style="margin: 30px;">
+                    <!-- ê³„ì •ì •ë³´ -->
                     <fieldset style="margin: 30px auto; width: 600px;">
-                        <legend>°èÁ¤Á¤º¸</legend>
+                        <legend>ê³„ì •ì •ë³´</legend>
                         <ul style="list-style-type: none;">
-                            <li>¾ÆÀÌµð<input type="text"></li>
-                            <li>ºñ¹Ð¹øÈ£<input type="password"></li>
-                            <li>ÀÌ¸ÞÀÏ<input type="email"></li>
+                            <li>ì•„ì´ë””<input type="text"></li>
+                            <li>ë¹„ë°€ë²ˆí˜¸<input type="password"></li>
+                            <li>ì´ë©”ì¼<input type="email"></li>
                         </ul>
                     </fieldset>
-                    <!-- °³ÀÎÁ¤º¸ -->
+                    <!-- ê°œì¸ì •ë³´ -->
                     <fieldset style="margin: 30px auto; width: 600px;">
-                        <legend>°³ÀÎÁ¤º¸</legend>
+                        <legend>ê°œì¸ì •ë³´</legend>
                         <ul style="list-style-type: none;">
-                            <li>ÀÌ¸§<input type="text"></li>
-                            <li>ÁÖ¹Î¹øÈ£<input type="text" style="width: 60px;">- <input type="text" style="width: 70px;"><input type="button" value="½Ç¸íÈ®ÀÎ"></li>
-                            <li>ÁÖ¼Ò<input type="text"> <input type="button" value="ÁÖ¼ÒÃ£±â"></li>
-                            <li>»ó¼¼ÁÖ¼Ò<input type="text"></li>
+                            <li>ì´ë¦„<input type="text"></li>
+                            <li>ì£¼ë¯¼ë²ˆí˜¸<input type="text" style="width: 60px;">- <input type="text" style="width: 70px;"><input type="button" value="ì‹¤ëª…í™•ì¸"></li>
+                            <li>ì£¼ì†Œ<input type="text"> <input type="button" value="ì£¼ì†Œì°¾ê¸°"></li>
+                            <li>ìƒì„¸ì£¼ì†Œ<input type="text"></li>
                         </ul>
                     </fieldset>
-                    <input type="submit" value="°¡ÀÔÇÏ±â">
+                    <input type="submit" value="ê°€ìž…í•˜ê¸°">
                 </form>
             </div>
         </main>
         <footer>
             <div>
                 <p><b>Help : </b> <a href="#">010-4240-3631</a> <a href="#" class="test"> poohharry@naver.com</a></p>
-                <p><b>Address : </b> ºÎ»ê±¤¿ª½Ã ºÎ»êÁø±¸ ÀüÆ÷µ¿ 892-21</p>
-                <p><b>Donation : </b> ±â¾÷ÀºÇà 980-006030-01-019</p>
+                <p><b>Address : </b> ë¶€ì‚°ê´‘ì—­ì‹œ ë¶€ì‚°ì§„êµ¬ ì „í¬ë™ 892-21</p>
+                <p><b>Donation : </b> ê¸°ì—…ì€í–‰ 980-006030-01-019</p>
             </div>
         </footer>
     </div>
