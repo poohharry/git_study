@@ -12,7 +12,7 @@ public class DBConnectionMgr {
     _password = "jiwoosky2!";
     private boolean _traceOn = true;
     private boolean initialized = false;
-    private int _openConnections = 10;
+    private int _openConnections = 10; // 사전에 연결 해둘 데이터베이스
 
     // 싱글턴 패턴(Singleton Pattern)
     private static DBConnectionMgr instance = null;
