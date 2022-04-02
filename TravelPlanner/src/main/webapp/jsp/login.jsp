@@ -109,6 +109,7 @@
             </div>
         </footer>
     </div>
+    <script src="../js/loginChk.js"></script>
     <script src="../js/cart.js"></script>
 </body>
 </html>
