@@ -3,7 +3,7 @@
     margin: 0px;
 }
 
-.default_layout{ /* ÀüÃ¼ ¿µ¿ª */
+.default_layout{ /* ì „ì²´ ì˜ì—­ */
     width: 1200px; 
     min-height: 1500px; 
     margin: 0px auto;
@@ -24,13 +24,13 @@ footer{
     padding: 10px;
 }
 
-/* Çì´õ ·¹ÀÌ¾Æ¿ô ±¸¼º*/
+/* í—¤ë” ë ˆì´ì•„ì›ƒ êµ¬ì„±*/
 .logoBox{
     float: left;
     width: 150px;
     height: 75px;
 }
-#logo{  /* ·Î°í ÀÌ¹ÌÁö Å©±â °íÁ¤ */
+#logo{  /* ë¡œê³  ì´ë¯¸ì§€ í¬ê¸° ê³ ì • */
     width: 150px;
     height: 75px;
 }
@@ -55,18 +55,18 @@ nav{
     min-height: 200px;
 }
 
-/* ³×ºñ¹Ù °ü·Ã */
-.nav_menu{           /* µå·Ó´Ù¿î ¸Ş´º ÀüÃ¼ Å©±â */
+/* ë„¤ë¹„ë°” ê´€ë ¨ */
+.nav_menu{           /* ë“œë¡­ë‹¤ìš´ ë©”ë‰´ ì „ì²´ í¬ê¸° */
     width: 800px;
     height: 75px;
 }
-.nav_display{       /* µå·Ó´Ù¿î »óÀ§ ¸Ş´º 1Ä­ */
+.nav_display{       /* ë“œë¡­ë‹¤ìš´ ìƒìœ„ ë©”ë‰´ 1ì¹¸ */
     background-color: cornflowerblue;
     float: left;
     width: 160px;
     height: 75px
 }
-.caption{           /* µå·Ó´Ù¿î ÇÏÀ§¸Şˆa */
+.caption{           /* ë“œë¡­ë‹¤ìš´ í•˜ìœ„ë©”ëŠ */
     clear: left;
     opacity: 0;
     overflow: hidden;
@@ -95,7 +95,7 @@ nav{
     transition-duration: 0.1s;
 }
 nav li:hover ul{
-    position: relative; /* nav li¿¡ °®´Ù ´ë¸é nav li¹Ù·Î ¹ØÀ¸·Î ¿Àµµ·Ï */
+    position: relative; /* nav liì— ê°–ë‹¤ ëŒ€ë©´ nav lië°”ë¡œ ë°‘ìœ¼ë¡œ ì˜¤ë„ë¡ */
 }
 a:link, a:visited {
     color:black;
@@ -120,7 +120,7 @@ header li{
     font-weight: bold;
 }
 
-/* ·Î±×ÀÎ ÆäÀÌÁö °ü·Ã */
+/* ë¡œê·¸ì¸ í˜ì´ì§€ ê´€ë ¨ */
 .loginPage_ul, .loginPage_ul li{
     list-style-type: none;
     
@@ -139,7 +139,7 @@ li label{
 
 @font-face {
     font-family: "sea_font";
-    src: url("../resource/³ª´®¼Õ±Û¾¾\ ¼¼¾ÆÃ¼.ttf") format("truetype");
+    src: url("../resource/ë‚˜ëˆ”ì†ê¸€ì”¨\ ì„¸ì•„ì²´.ttf") format("truetype");
 }
 .font{
     font-family: "sea_font";
@@ -157,7 +157,7 @@ li label{
 
 
 
-/* ÃßÃµ°ü±¤Áö */
+/* ì¶”ì²œê´€ê´‘ì§€ */
 
 .lo_content_box{
     width: 100%;
@@ -184,7 +184,7 @@ li label{
 }
 
 
-/* Àå¹Ù±¸´Ï */
+/* ì¥ë°”êµ¬ë‹ˆ */
 #basket{
    width: 320px; 
    height: 500px; 

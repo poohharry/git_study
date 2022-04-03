@@ -103,7 +103,7 @@
                             <li>상세주소<input type="text"></li>
                         </ul>
                     </fieldset>
-                    <input type="submit" value="가입하기">
+                    <button onclick="signUpChk()">회원가입</button>
                 </form>
             </div>
         </main>
@@ -116,5 +116,6 @@
         </footer>
     </div>
     <script src="../js/cart.js"></script>
+    <script scr="../js/signUpChk.js"></script>
 </body>
 </html>
