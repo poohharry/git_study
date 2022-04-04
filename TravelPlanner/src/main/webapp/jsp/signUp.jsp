@@ -90,7 +90,6 @@
                         <ul style="list-style-type: none;">
                             <li>아이디<input type="text"></li>
                             <li>비밀번호<input type="password"></li>
-                            <li>비밀번호<input type="password"></li>
                             <li>이메일<input type="email"></li>
                         </ul>
                     </fieldset>
@@ -117,6 +116,6 @@
         </footer>
     </div>
     <script src="../js/cart.js"></script>
-    <script src="../js/signUpChk.js"></script>
+    <script scr="../js/signUpChk.js"></script>
 </body>
 </html>

@@ -95,7 +95,7 @@
                             </li>
                         </ul>
                     </div>
-                    <input class="login_button" type="button" value="로그인">
+                    <input class="login_button" type="button" value="로그인" onclick="loginChk()">
                 </div>
             </div>
         </main>
@@ -109,6 +109,7 @@
             </div>
         </footer>
     </div>
+    <script src="../js/loginChk.js"></script>
     <script src="../js/cart.js"></script>
 </body>
 </html>
