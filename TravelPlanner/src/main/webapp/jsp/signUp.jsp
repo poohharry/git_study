@@ -9,7 +9,13 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <style>
+    	label{
+    		width: 100px;
+    		margin-right: 20px;
+    	}
+    	
+    </style>
 </head>
 <body>
     <aside id="basket">
@@ -83,26 +89,27 @@
         <main class="container" style="height: 100%; width: 100%;">
             <div class="font" id="main_contents">
 
-                <form name="signUpFrm" method="post" action="signUpProc.jsp" style="margin: 30px;">
+                <form name="signUpFrm" method="post" action="signUpProc.jsp"> 
                     <!-- 계정정보 -->
-                    <fieldset style="margin: 30px auto; width: 600px;">
+                    <fieldset style="margin: 0 auto 30px auto; width: 600px;">
                         <legend>계정정보</legend>
-                        <ul style="list-style-type: none;">
-                            <li>아이디<input type="text"></li>
-                            <li>비밀번호<input type="password"></li>
-                            <li>이메일<input type="email"></li>
+                        <ul style="list-style-type: none; text-align: center;">
+                            <li><label>아이디</label><input name="id"></li>
+                            <li><label>비밀번호</label><input type="password" name="pw"></li>
+                            <li><label>비밀번호 확인</label><input type="password" name="pw"></li>
+                            <li><label>이름</label><input  name="name"></li>
+                            <li><label>이메일</label><input type="email" name="email"></li>
                         </ul>
                     </fieldset>
                     <!-- 개인정보 -->
-                    <fieldset style="margin: 30px auto; width: 600px;">
+                    <!-- <fieldset style="margin: 30px auto; width: 600px;">
                         <legend>개인정보</legend>
                         <ul style="list-style-type: none;">
-                            <li>이름<input type="text"></li>
-                            <li>주민번호<input type="text" style="width: 60px;">- <input type="text" style="width: 70px;"><input type="button" value="실명확인"></li>
+                            <li>이름<input name="name"></li>
                             <li>주소<input type="text"> <input type="button" value="주소찾기"></li>
                             <li>상세주소<input type="text"></li>
                         </ul>
-                    </fieldset>
+                    </fieldset> -->
                     <button onclick="signUpChk()">회원가입</button>
                 </form>
             </div>
