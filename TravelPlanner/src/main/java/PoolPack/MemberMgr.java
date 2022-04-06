@@ -18,10 +18,10 @@ public class MemberMgr {
 	
 	// 회원가입
 	public boolean insertMember(MemberBean bean) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		String sql = null;
-		
+		Connection con = null;				// 데이터베이스와의 연결
+		PreparedStatement pstmt = null;		// 사전에 컴파일 된 SQL문을 실행
+		String sql = null;					// SQL문
+		boolean flag = false;
 		
 		
 		
