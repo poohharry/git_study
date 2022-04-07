@@ -96,9 +96,10 @@
                         <ul style="list-style-type: none; text-align: center;">
                             <li><label>아이디</label><input name="id"></li>
                             <li><label>비밀번호</label><input type="password" name="pw"></li>
-                            <li><label>비밀번호 확인</label><input type="password" name="pw"></li>
+                            <li><label>비밀번호 확인</label><input type="password" name="repw"></li>
                             <li><label>이름</label><input  name="name"></li>
                             <li><label>이메일</label><input type="email" name="email"></li>
+                            <li><label>휴대폰</label><input name="phone"></li>
                         </ul>
                     </fieldset>
                     <!-- 개인정보 -->

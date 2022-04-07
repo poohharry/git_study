@@ -6,21 +6,22 @@ public class MemberBean {
 	private String pw;
 	private String name;
 	private String email;
+	private String phone;
 
 	
 	public String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setId(String _id) {
+		this.id = _id;
 	}
 
 	public String getPw() {
 		return pw;
 	}
 
-	public void setPwd(String _pw) {
+	public void setPw(String _pw) {
 		this.pw = _pw;
 	}
 
@@ -38,5 +39,13 @@ public class MemberBean {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPhone(String _phone) {
+		this.phone = _phone;
 	}
 }

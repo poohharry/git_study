@@ -12,9 +12,9 @@ public class DBConnectionMgr {
     _password = "jiwoosky2!";
     private boolean _traceOn = true;
     private boolean initialized = false;
-    private int _openConnections = 10; // »çÀü¿¡ ¿¬°á ÇØµÑ µ¥ÀÌÅÍº£ÀÌ½º
+    private int _openConnections = 10; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ì½ï¿½
 
-    // ½Ì±ÛÅÏ ÆĞÅÏ(Singleton Pattern)
+    // ì‹±ê¸€í„´ íŒ¨í„´(Singleton Pattern)
     private static DBConnectionMgr instance = null;
     
     public DBConnectionMgr() {
@@ -24,10 +24,10 @@ public class DBConnectionMgr {
      unused connections are closed.
      */
     
-    // ½Ì±ÛÅÏ ¹®¹ı
-    // °´Ã¼¸¦ ÀÏÀÏÀÌ ¸¸µå´Â °ÍÀÌ ¾Æ´Ï¶ó getInstance ¸Ş¼Òµå ¾È¿¡ µû·Î ¸¸µé¾î Áà¼­
-    // ÇÊ¿äÇÒ ¶§¸¶´Ù ÇØ´ç ¸Ş¼Òµå¸¦ ÅëÇØ ±× °´Ã¼¸¦ ¹İÈ¯ÇØ ÁÜ
-    // ÀÌ¶§ staticÀ» ÇØ ÁÜÀ¸·Î µû·Î °´Ã¼¸¦ ¸¸µéÁö ¾Ê¾Æµµ Á¢±Ù °¡´ÉÇÔ
+    // ì‹±ê¸€í„´ ë¬¸ë²•
+    // ê°ì²´ë¥¼ ì¼ì¼ì´ ë§Œë“œëŠ” ê²ƒì´ ì•„ë‹ˆë¼ getInstance ë©”ì†Œë“œ ì•ˆì— ë”°ë¡œ ë§Œë“¤ì–´ ì¤˜ì„œ
+    // í•„ìš”í•  ë•Œë§ˆë‹¤ í•´ë‹¹ ë©”ì†Œë“œë¥¼ í†µí•´ ê·¸ ê°ì²´ë¥¼ ë°˜í™˜í•´ ì¤Œ
+    // ì´ë•Œ staticì„ í•´ ì¤Œìœ¼ë¡œ ë”°ë¡œ ê°ì²´ë¥¼ ë§Œë“¤ì§€ ì•Šì•„ë„ ì ‘ê·¼ ê°€ëŠ¥í•¨
     public static DBConnectionMgr getInstance() {
         if (instance == null) {
             synchronized (DBConnectionMgr.class) {
@@ -88,7 +88,7 @@ public class DBConnectionMgr {
             // If connection is not in use, test to ensure it's still valid!
             if (!co.inUse) {
                 try {
-                	// Á¢¼ÓÀÌ ÀÌ¹Ì µÈ °ÍµéÀº ´İ¾ÆÁÜ
+                	// ì ‘ì†ì´ ì´ë¯¸ ëœ ê²ƒë“¤ì€ ë‹«ì•„ì¤Œ
                     badConnection = co.connection.isClosed();
                     if (!badConnection)
                         badConnection = (co.connection.getWarnings() != null);
@@ -112,7 +112,7 @@ public class DBConnectionMgr {
         if (c == null) {
             c = createConnection();
             co = new ConnectionObject(c, true);
-            // ºñ¿öÁø ºÎºĞÀº Ã¤¿öÁÜ
+            // ë¹„ì›Œì§„ ë¶€ë¶„ì€ ì±„ì›Œì¤Œ
             connections.addElement(co);
             trace("ConnectionPoolManager: Creating new DB connection #" + connections.size());
         }
@@ -126,7 +126,7 @@ public class DBConnectionMgr {
 
         ConnectionObject co = null;
         
-        // ¹İº¹¹® µ¹¸é¼­ °°Àº °´Ã¼°¡ ÀÖÀ¸¸é ÇØ´ç ÀÎµ¦½º¸¦ ´Ù½Ã ¾µ ¼ö ÀÖ°Ô²û ÇØ ÁÜ
+        // ë°˜ë³µë¬¸ ëŒë©´ì„œ ê°™ì€ ê°ì²´ê°€ ìˆìœ¼ë©´ í•´ë‹¹ ì¸ë±ìŠ¤ë¥¼ ë‹¤ì‹œ ì“¸ ìˆ˜ ìˆê²Œë” í•´ ì¤Œ
         for (int i = 0; i < connections.size(); i++) {
             co = (ConnectionObject) connections.get(i);
             if (c == co.connection) {
@@ -137,7 +137,7 @@ public class DBConnectionMgr {
 
         for (int i = 0; i < connections.size(); i++) {
             co = (ConnectionObject) connections.get(i);
-            // ÇöÀç »ç¿ëÇÏ´Â ¼ö(10°³)¿¡ ¸Â°Ô Á¦ÇÑÇÔ
+            // í˜„ì¬ ì‚¬ìš©í•˜ëŠ” ìˆ˜(10ê°œ)ì— ë§ê²Œ ì œí•œí•¨
             if ((i + 1) > _openConnections && !co.inUse)
                 removeConnection(co.connection);
         }
@@ -182,7 +182,7 @@ public class DBConnectionMgr {
     }
 
     /** Marks a flag in the ConnectionObject to indicate this connection is no longer in use */
-    // synchronized: µ¿½Ã Á¢¼Ó Á¦ÇÑÇÏ´Â ±â´É
+    // synchronized: ë™ì‹œ ì ‘ì† ì œí•œí•˜ëŠ” ê¸°ëŠ¥
     public synchronized void removeConnection(Connection c) {
         if (c == null)
             return;
