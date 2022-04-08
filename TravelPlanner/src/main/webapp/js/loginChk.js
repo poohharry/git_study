@@ -1,6 +1,6 @@
 'use strict'
 
-const frm = $('')
+const frm = $()
 
 function loginChk() {
 	if($("#id") == "") {
