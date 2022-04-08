@@ -83,21 +83,23 @@
     
         
         <main>
-            <div id="main_contents">
-                <div style="margin: 0px 350px; padding: 50px 0px;">
-                    <div style="float: left;">
-                        <ul class="loginPage_ul">
-                            <li><label>아이디</label><input type="text"></li>
-                            <li><label>비밀번호</label><input type="password"></li>
-                            <li><a href="#" style="margin: 5px;">아이디 찾기</a>
-                                <a href="#" style="margin: 5px;">비밀번호 찾기</a>
-                                <a href="signUp.jsp" style="margin: 5px;">회원가입</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <input class="login_button" type="button" value="로그인" onclick="loginChk()">
-                </div>
-            </div>
+	       	<form name="loginFrm" method="post" action="loginProc.jsp">
+	            <div id="main_contents">
+	                <div style="margin: 0px 350px; padding: 50px 0px;">
+	                    <div style="float: left;">
+	                        <ul class="loginPage_ul">
+	                            <li><label>아이디</label><input type="text" id="id"></li>
+	                            <li><label>비밀번호</label><input type="password" id="pw"></li>
+	                            <li><a href="#" style="margin: 5px;">아이디 찾기</a>
+	                                <a href="#" style="margin: 5px;">비밀번호 찾기</a>
+	                                <a href="signUp.jsp" style="margin: 5px;">회원가입</a>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                    <input class="login_button" id="logBtn" type="button" value="로그인" onclick="loginChk()">
+	                </div>
+	            </div>
+	        </form>
         </main>
     
         
