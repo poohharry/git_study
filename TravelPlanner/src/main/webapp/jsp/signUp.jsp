@@ -111,7 +111,10 @@
                             <li>상세주소<input type="text"></li>
                         </ul>
                     </fieldset> -->
+                    
                     <button onclick="signUpChk()">회원가입</button>
+                    
+                    <!-- <input type="button" onclick="signUpChk()" value="회원가입"> -->
                 </form>
             </div>
         </main>
@@ -123,7 +126,7 @@
             </div>
         </footer>
     </div>
-    <script src="../js/cart.js"></script>
-    <script scr="../js/signUpChk.js"></script>
+    <script defer src="../js/cart.js"></script>
+    <script defer src="../js/signUpChk.js"></script>
 </body>
 </html>
