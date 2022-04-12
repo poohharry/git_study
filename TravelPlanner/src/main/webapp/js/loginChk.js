@@ -1,8 +1,9 @@
 'use strict'
 
-const frm = document.loginFrm;
-
 function loginChk() {
+	
+	const frm = document.loginFrm;
+	
 	if(frm.id.value == "") {
 		alert("아이디를 입력해 주세요.");
 		frm.id.focus();
@@ -13,5 +14,9 @@ function loginChk() {
 		document.loginFrm.pwd.focus();
 		return;
 	}
+	
+	
+	
 	frm.submit();
+	//location.href = `loginProc.jsp?id=${frm.id.value}&pw=${frm.pw.value}`;
 }

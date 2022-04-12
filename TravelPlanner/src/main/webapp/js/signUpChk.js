@@ -5,41 +5,40 @@ const sFrm = document.signUpFrm;
 
 function signUpChk() {
 
-	
-	if(sFrm.id == "") {
+	if(sFrm.id.value == "") {
 		alert("아이디를 입력하십시오");
-		document.signUpFrm.id.focus();
+		sFrm.id.focus();
 		return;
 	}
 	
-	if(sFrm.pw == "") {
+	if(sFrm.pw.value == "") {
 		alert("비밀번호를 입력하십시오");
-		document.signUpFrm.pw.focus();
+		sFrm.pw.focus();
 		return;
 	}
 	
-	if(sFrm.repw == "" || sFrm.pw != sFrm.repw) {
+	if(sFrm.repw.value == "" || sFrm.pw.value != sFrm.repw.value) {
 		alert("비밀번호를 확인하십시오");
 		sFrm.repw.value="";
 		sFrm.repw.focus();
 		return;
 	}
 	
-	if(sFrm.name == "") {
+	if(sFrm.name.value == "") {
 		alert("이름을 입력하십시오");
-		document.signUpFrm.name.focus();
+		sFrm.name.focus();
 		return;
 	}
 	
-	if(sFrm.email == "") {
+	if(sFrm.email.value == "") {
 		alert("이메일을 입력하십시오");
-		document.signUpFrm.email.focus();
+		sFrm.email.focus();
 		return;
 	}
 	
-	if(sFrm.phone == "") {
+	if(sFrm.phone.value == "") {
 		alert("휴대폰 번호를 입력하십시오");
-		document.signUpFrm.phone.focus();
+		sFrm.phone.focus();
 		return;
 	}
 	
@@ -57,10 +56,13 @@ function signUpChk() {
     	&& spacePos == -1 							// 공백 없음
     	&& commaPos == -1 							// 콤마(,) 없음
 	    && atPos + 1 < dotPos 						// @와 . 사이에 글자가 1개 이상
-	    && dotPos + 1 < eMailSize);					// .뒤에 글자가 1개 이상
+	    && dotPos + 1 < eMailSize)					// .뒤에 글자가 1개 이상
+	    {
+		
+	}					
     else {
           alert('E-mail주소 형식이 잘못되었습니다.\n\r다시 입력해 주세요!');
-	      document.regFrm.email.focus();
+	      sFrm.email.focus();
 		  return;
     }
     sFrm.submit();

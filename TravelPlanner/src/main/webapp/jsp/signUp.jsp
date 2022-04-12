@@ -112,7 +112,7 @@
                         </ul>
                     </fieldset> -->
                     
-                    <button onclick="signUpChk()">회원가입</button>
+                    <button type="button" onclick="signUpChk()">회원가입</button>
                     
                     <!-- <input type="button" onclick="signUpChk()" value="회원가입"> -->
                 </form>
