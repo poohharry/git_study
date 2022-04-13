@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+  request.setCharacterEncoding("UTF-8");
+  String id = (String)session.getAttribute("lgnId");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,11 +20,9 @@
             <button onclick="cart_close()">닫기</button>
             <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
         </div>
-        
-        <div><a href="#">예시 1</a></div>
-        <div><a href="#">예시 2</a></div>
-        <div><a href="#">예시 3</a></div>
-        <div><a href="#">예시 4</a></div>
+        <div id="inner_basket">
+
+        </div>
     </aside>
     <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
         <div style="text-align: right; font-size: 8pt;">윗 공간</div>
@@ -70,14 +72,20 @@
                 
             <!-- 로그인 및 장바구니 버튼 -->
             <div class="login_cart">
-                <div style="margin: 5px;">
-                    <a href="login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                    <button onclick="cart_open();">장바구니</button>
-
-                    <!-- 페이지 이동이 아닌 버튼을 눌렀을 경우 사이드바로 나오도록 만들 예정-->
+                    <div style="margin: 5px;">
+                    <%if(id != null) {
+                    	if(id.length() < 9) {
+                    	out.print(id + "님");                    		
+                    	}else {
+                    		out.print(id.substring(0, 6) + "...님");
+                    	}%>
+                    	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
+                    <%}else {%>
+                        <a href="login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                    <% }%>
+                        <button onclick="cart_open();">장바구니</button>
+                    </div>
                 </div>
-           
-            </div>
         </header>
         <main>
             <div style="padding: 15px;">

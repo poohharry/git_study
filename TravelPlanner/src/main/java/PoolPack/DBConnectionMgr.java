@@ -12,7 +12,7 @@ public class DBConnectionMgr {
     _password = "jiwoosky2!";
     private boolean _traceOn = true;
     private boolean initialized = false;
-    private int _openConnections = 10; // ������ ���� �ص� �����ͺ��̽�
+    private int _openConnections = 10; // 커넥션 객체 개수를 지정
 
     // 싱글턴 패턴(Singleton Pattern)
     private static DBConnectionMgr instance = null;
@@ -262,10 +262,11 @@ public class DBConnectionMgr {
             System.err.println(s);
     }
 }
-// Wrapping Class
+// Wrapper Class
+// 한 클래스에서 하는 기능과 추가로 어떠한 기능을 쓰고싶을때 관리하기 편하도록 하나로 묶어서(래핑) 클래스화 시킴 
 class ConnectionObject {
-    public java.sql.Connection connection = null;
-    public boolean inUse = false;
+    public java.sql.Connection connection = null;	// 커넥션 객체
+    public boolean inUse = false;					// 커넥션이 사용되고 있는지 아닌지 확인
 
     public ConnectionObject(Connection c, boolean useFlag) {
         connection = c;

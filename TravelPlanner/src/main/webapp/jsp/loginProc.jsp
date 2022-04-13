@@ -16,9 +16,13 @@
 		break;
 	case 2: msg = "비밀번호가 일치하지 않습니다.";
 		break;
-	case 3: msg = "로그인에 성공하였습니다.";
+	case 3: {
+		msg = "로그인에 성공하였습니다.";
+		url = "mainPage.jsp";
+		session.setAttribute("lgnId", id);
+	}
 		break;
-	} 
+	}
 %>
 <script>
 	alert("<%=msg%>");	

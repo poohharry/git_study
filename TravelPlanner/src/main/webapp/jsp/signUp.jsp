@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -23,11 +25,9 @@
             <button onclick="cart_close()">닫기</button>
             <span style="text-align: center; line-height: 30px;">장바구니 목록</span>
         </div>
-        
-        <div><a href="#">예시 1</a></div>
-        <div><a href="#">예시 2</a></div>
-        <div><a href="#">예시 3</a></div>
-        <div><a href="#">예시 4</a></div>
+        <div id="inner_basket">
+
+        </div>
     </aside>
     <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
         <div style="text-align: right; font-size: 8pt;">윗 공간</div>
