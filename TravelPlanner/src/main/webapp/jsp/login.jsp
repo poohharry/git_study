@@ -99,8 +99,7 @@
 	            </div>
 	        </form>	        
         </main>
-    
-        
+
         <footer>
             <div>
                 <p><b>Help : </b> <a href="#">010-4240-3631</a> <a href="#" class="test"> poohharry@naver.com</a></p>
