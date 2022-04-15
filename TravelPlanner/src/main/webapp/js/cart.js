@@ -2,8 +2,9 @@
  
 const main_cart = $('#basket');			// 사이드 장바구니 전체
 const inner_cart = $('#inner_basket');		// 사이드 장바구니 안의 실제 물품이 담기는 공간
+const member_cart = $('#member_basket');	// 로그인 했을 경우 나오는 장바구니
+
 let cartBox ;
-// let cartBox = sessionStorage.getItem('cartClassKey');	  // 클래스 배열
 
 // 세션스토리지가 비어있으면 공백의 cartBox를, 하나라도 차 있다면 세션스토리지에서 갖고온 값을 디폴트로
 if(sessionStorage.cartClassKey == undefined) {
