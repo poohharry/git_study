@@ -14,9 +14,6 @@ function loginChk() {
 		document.loginFrm.pwd.focus();
 		return;
 	}
-	
-	
-	
 	frm.submit();
 	//location.href = `loginProc.jsp?id=${frm.id.value}&pw=${frm.pw.value}`;
 }

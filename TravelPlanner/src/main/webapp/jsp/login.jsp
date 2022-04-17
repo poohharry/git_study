@@ -94,7 +94,7 @@
 	                            </li>
 	                        </ul>
 	                    </div>
-	        			<input type="button" class="login_button" id="logBtn" value="로그인" onclick="loginChk()">
+	        			<input type="button" class="login_button" id="logBtn" value="로그인" onClick="loginChk()">
 	                </div>
 	            </div>
 	        </form>	        
