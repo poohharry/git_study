@@ -13,6 +13,7 @@
     <title>소개페이지</title>
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
 </head>
 <body>
     <aside id="basket">
@@ -106,6 +107,7 @@
 
 
             </div>
+            
         </main>
    
         <footer>
