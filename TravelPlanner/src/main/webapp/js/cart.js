@@ -66,7 +66,7 @@ function in_cart(lo_name, add, id) {   // (지역이름, 이미지 주소)
 	cartBox[cartNum].content = 
 	`<div class="inner_cart">
 	<img src="${add}" class="inner_cart_img">
-	${cartBox[cartNum].name}
+	<span name="loca">${cartBox[cartNum].name}</span>
 	<button class="Xbutton" onclick="out_cart(${cartNum}, '${id}')">X</button>
 	</div>
 	<hr style="margin: 5px 0;">`;
@@ -135,7 +135,7 @@ function all_inner_cart() {
 function changeContent(num, img, name, id) { // 장바구니에서 뺄 때 마다 클래스의 x버튼 대응을 위해 html코드를 갱신시켜줌
 	let a = `<div class="inner_cart">
 	<img src="${img}" class="inner_cart_img">
-	${name}
+	<span name="loca">${name}</span>
 	<button class="Xbutton" onclick="out_cart(${num}, ${id})">X</button>
 	</div>
 	<hr style="margin: 5px 0;">`;

@@ -16,6 +16,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+    	function asd() {
+    		let arr = new Array();
+    		arr = document.getElementsByName("loca");
+    		
+    		//let temp = document.getElementsByName("loca");
+			let url = "login.jsp?loName="+ arr[0].innerHTML+ "," + arr[1].innerHTML;
+			location.href=url;
+    		
+    	}
+    </script>
+    
 </head>
 <body>
     <aside id="basket">
@@ -90,7 +103,8 @@
                     	}%>
                     	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
                     <%}else {%>
-                        <a href="login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                        <a onclick="asd()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                        <!-- <a href="login.jsp?loName=jeju,gyeongi"> -->
                     <% }%>
                         <button onclick="cart_open();">장바구니</button>
                     </div>
@@ -122,7 +136,7 @@
                         <a href="#"><img src="../img/gangwon-logo.jpg" width="400px" height="270.25px"></a>
                     </div>
                     <div class="lo_text">
-                        <h3>강원도</h3><button id="gangwon" class="cartBtn" onclick="in_cart('강원도', '../img/gangwon-logo.jpg')">장바구니 넣기</button>
+                        <h3>강원도</h3><button id="gangwon" class="cartBtn" onclick="in_cart('강원도', '../img/gangwon-logo.jpg', 'gangwon')">장바구니 넣기</button>
                         <br><br>
                         <p>산과 바다를 느끼고 싶을 때</p>
                         <br><br>
@@ -141,7 +155,7 @@
                         
                     </div>
                     <div class="lo_text">
-                        <h3>경기도</h3><button id="gyeonggi" class="cartBtn" onclick="in_cart('경기도', '../img/gyeonggi-logo.jpg')">장바구니 넣기</button>
+                        <h3>경기도</h3><button id="gyeonggi" class="cartBtn" onclick="in_cart('경기도', '../img/gyeonggi-logo.jpg', 'gyeonggi')">장바구니 넣기</button>
                         <br><br>
                         <p>도시속 여행을 원할 때</p>
                         <br><br>
@@ -157,7 +171,7 @@
                         
                     </div>
                     <div class="lo_text">
-                        <h3>전라도</h3><button id="jeolla" class="cartBtn" onclick="in_cart('전라도', '../img/Jeolla-logo.jpg')">장바구니 넣기</button>
+                        <h3>전라도</h3><button id="jeolla" class="cartBtn" onclick="in_cart('전라도', '../img/Jeolla-logo.jpg', 'jeolla')">장바구니 넣기</button>
                         <br><br>
                         <p>식도락 여행의 진수를 느끼고 싶을 때</p>
                         <br><br>
