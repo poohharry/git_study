@@ -22,7 +22,6 @@
     		let arr = new Array();
     		arr = document.getElementsByName("loca");
     		
-    		//let temp = document.getElementsByName("loca");
 			let url = "login.jsp?loName="+ arr[0].innerHTML+ "," + arr[1].innerHTML;
 			location.href=url;
     		
