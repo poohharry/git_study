@@ -6,6 +6,7 @@
 	request.setCharacterEncoding("UTF-8");
 	String name = request.getParameter("loName");
 	out.println(name);
+	
 %>
 
 <head>
