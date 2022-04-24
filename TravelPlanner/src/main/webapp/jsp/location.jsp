@@ -20,6 +20,7 @@
     <script>
     	function asd() {
     		let arr = new Array();
+    		/* 장바구니가 비어있을때도 로그인 페이지로 이동가능하게 만들어줄 필요가 있음 */
     		arr = document.getElementsByName("loca");
     		
 			let url = "login.jsp?loName="+ arr[0].innerHTML+ "," + arr[1].innerHTML;
