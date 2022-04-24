@@ -7,7 +7,6 @@
 	String name = request.getParameter("loName");
 	out.println(name);
 	
-	
 %>
 
 <head>
