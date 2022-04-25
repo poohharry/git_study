@@ -103,6 +103,7 @@
                     	}%>
                     	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
                     <%}else {%>
+                        <!-- 장바구니에 뭐가 담겨있어야만 이동이 되는 오류 -->
                         <a onclick="asd()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                         <!-- <a href="login.jsp?loName=jeju,gyeongi"> -->
                     <% }%>

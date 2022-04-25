@@ -146,15 +146,12 @@ li label{
     font-size: x-large;
 }
 
-
-
 .test::before{
     content : "|";
     font-size: small;
     color: rgba(0, 0, 0, 0.3);
     
 }
-
 
 
 /* 추천관광지 */
