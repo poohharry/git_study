@@ -20,6 +20,7 @@
     <script>
     	function asd() {
     		let arr = new Array();
+    		/* 장바구니가 비어있을때도 로그인 페이지로 이동가능하게 만들어줄 필요가 있음 */
     		arr = document.getElementsByName("loca");
     		
 			let url = "login.jsp?loName="+ arr[0].innerHTML+ "," + arr[1].innerHTML;
@@ -103,6 +104,7 @@
                     	}%>
                     	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
                     <%}else {%>
+                        <!-- 장바구니에 뭐가 담겨있어야만 이동이 되는 오류 -->
                         <a onclick="asd()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                         <!-- <a href="login.jsp?loName=jeju,gyeongi"> -->
                     <% }%>
