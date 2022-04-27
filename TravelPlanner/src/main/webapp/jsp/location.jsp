@@ -18,18 +18,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
-    	function asd() {
+    	function sendParam() {
     		let arr = new Array();
     		/* 장바구니가 비어있을때도 로그인 페이지로 이동가능하게 만들어줄 필요가 있음 */
     		arr = document.getElementsByName("loca");
-    		
-			let url = "login.jsp?loName="+ arr[0].innerHTML+ "," + arr[1].innerHTML;
-			location.href=url;
-    		
-			
+    		let item = "";
+    		if(arr == null) {
+    			location.href = login.jsp
+    		}else {
+	    		// arr의 길이 (등록된 장바구니 개수)만큼 반복문을 돌려서 파라미터값을 만들어 줌
+	    		for(let i = 0; i < arr.length; i++) {
+	    			if(i != 0) {
+	    				item += "," + arr[i].innerHTML;
+	    			}else {
+	    				item = arr[i].innerHTML;
+	    			}
+	    		}
+				let url = "login.jsp?loName=" + item;
+				location.href=url;
+    		}
     	}
     </script>
-    
 </head>
 <body>
     <aside id="basket">
@@ -104,9 +113,7 @@
                     	}%>
                     	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
                     <%}else {%>
-                        <!-- 장바구니에 뭐가 담겨있어야만 이동이 되는 오류 -->
-                        <a onclick="asd()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
-                        <!-- <a href="login.jsp?loName=jeju,gyeongi"> -->
+                        <a onclick="sendParam()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                     <% }%>
                         <button onclick="cart_open();">장바구니</button>
                     </div>

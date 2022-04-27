@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:useBean id="mMgr" class="PoolPack.MemberMgr"/>
+
 <!DOCTYPE html>
 <html lang="ko">
 <%
+
 	request.setCharacterEncoding("UTF-8");
+	// 쿼리로 던진 파라미터를 받아옴
 	String name = request.getParameter("loName");
-	out.println(name);
-	
+	// 더미 계정에 임시로 장바구니 아이템을 등록
+	mMgr.insertTempCart(name);
 	
 %>
 
