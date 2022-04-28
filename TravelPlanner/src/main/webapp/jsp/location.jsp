@@ -38,6 +38,12 @@
 				location.href=url;
     		}
     	}
+    	function createLocalCart() {
+    		/* 
+    		장바구니에 담기 버튼을 눌렀을 경우 로컬파일에 기록하는 기능
+    		
+    		*/
+    	}
     </script>
 </head>
 <body>
