@@ -17,6 +17,7 @@ public class MemberMgr {
 	}
 	
 	
+	
 	// 회원가입
 	public boolean insertMember(MemberBean bean) {
 		Connection con = null;				// 데이터베이스와의 연결
