@@ -38,13 +38,6 @@
 				location.href=url;
     		}
     	}
-    	function createLocalCart() {
-    		/* 
-    		장바구니에 담기 버튼을 눌렀을 경우 로컬파일에 기록하는 기능
-    		filewrite();
-    		json? or txt?
-    		*/
-    	}
     </script>
 </head>
 <body>
@@ -203,6 +196,7 @@
                 <p><b>Help : </b> <a href="#">010-4240-3631</a> <a href="#" class="test"> poohharry@naver.com</a></p>
                 <p><b>Address : </b> 부산광역시 부산진구 전포동 892-21</p>
                 <p><b>Donation : </b> 기업은행 980-006030-01-019</p>
+                <input type="button" onclick="test()" value="txt파일 생성">
             </div>
         </footer>
     </div>
@@ -210,6 +204,7 @@
     <script>
         AOS.init();
     </script>
+    <script type="text/javascript" defer src="../js/localCart.js"></script>
     <script defer src="../js/cart.js"></script>
 </body>
 </html>
