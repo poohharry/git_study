@@ -211,4 +211,7 @@ h3{
     width: 115px;
     height: 75px;
 }
+a{
+	cursor: pointer;
+}
 

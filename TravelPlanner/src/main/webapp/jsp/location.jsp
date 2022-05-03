@@ -18,26 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
-    	function sendParam() {
-    		let arr = new Array();
-    		/* 장바구니가 비어있을때도 로그인 페이지로 이동가능하게 만들어줄 필요가 있음 */
-    		arr = document.getElementsByName("loca");
-    		let item = "";
-    		if(arr == null) {
-    			location.href = login.jsp
-    		}else {
-	    		// arr의 길이 (등록된 장바구니 개수)만큼 반복문을 돌려서 파라미터값을 만들어 줌
-	    		for(let i = 0; i < arr.length; i++) {
-	    			if(i != 0) {
-	    				item += "," + arr[i].innerHTML;
-	    			}else {
-	    				item = arr[i].innerHTML;
-	    			}
-	    		}
-				let url = "login.jsp?loName=" + item;
-				location.href=url;
-    		}
-    	}
+    	
     </script>
 </head>
 <body>
@@ -64,15 +45,15 @@
         <header>
             <!-- 메인페이지 이동용 로고 그림 -->
             <div class="logoBox"> <!-- w:150 h:75 -->
-                <a href="mainPage.jsp"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
+                <a onclick="sendParam('mainPage.jsp')"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
             </div>
             
             <!-- 네비바  -->
             <nav> <!-- w:800, h:75 -->
                 <ul class="nav_menu">
-                    <li><a href="introduce.jsp" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
-                    <li><a href="map.jsp" class="nav_display">지도</a> </li>
-                    <li><a href="location.jsp" class="nav_display">추천관광지</a>
+                    <li><a onclick="sendParam('introduce.jsp')" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
+                    <li><a onclick="sendParam('map.jsp')" class="nav_display">지도</a> </li>
+                    <li><a onclick="sendParam('location.jsp')" class="nav_display">추천관광지</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">경상도</a></li>
                             <li><a href="#" class="caption_display">전라도</a></li>
@@ -81,7 +62,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="restaurant.jsp" class="nav_display">추천식당</a>
+                    <li><a onclick="sendParam('restaurant.jsp')" class="nav_display">추천식당</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">한식</a></li>
                             <li><a href="#" class="caption_display">일식</a></li>
@@ -90,7 +71,7 @@
                             <li><a href="#" class="caption_display">디저트, 카페</a></li>
                         </ul>
                     </li>
-                    <li><a href="rest.jsp" class="nav_display">추천숙소</a>
+                    <li><a onclick="sendParam('rest.jsp')" class="nav_display">추천숙소</a>
                         <ul class="caption">
                             <li><a href="#" class="caption_display">호텔</a></li>
                             <li><a href="#" class="caption_display">모텔</a></li>
@@ -113,7 +94,7 @@
                     	}%>
                     	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
                     <%}else {%>
-                        <a onclick="sendParam()">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                        <a onclick="sendParam('login.jsp')">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                     <% }%>
                         <button onclick="cart_open();">장바구니</button>
                     </div>
@@ -203,7 +184,7 @@
     <script>
         AOS.init();
     </script>
-    <script type="text/javascript" defer src="../js/localCart.js"></script>
+    <script type="text/javascript" defer src="../js/sendParam.js"></script>
     <script defer src="../js/cart.js"></script>
 </body>
 </html>

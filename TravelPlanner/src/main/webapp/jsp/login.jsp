@@ -6,11 +6,11 @@
 <html lang="ko">
 <%
 
-	request.setCharacterEncoding("UTF-8");
+/* 	request.setCharacterEncoding("UTF-8");
 	// 쿼리로 던진 파라미터를 받아옴
 	String name = request.getParameter("loName");
 	// 더미 계정에 임시로 장바구니 아이템을 등록
-	mMgr.insertTempCart(name);
+	mMgr.insertTempCart(name); */
 	
 %>
 
