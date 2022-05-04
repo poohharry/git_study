@@ -61,8 +61,6 @@ public class MemberMgr {
 		// 2 : 비밀번호가 일치하지 않음
 		// 3 : 로그인 성공
 		int flag = 0;
-		
-		
 		try {
 			con = pool.getConnection();
 			// 입력받은 id가 데이터베이스에 존재하는지 확인

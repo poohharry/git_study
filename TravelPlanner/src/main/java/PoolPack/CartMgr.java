@@ -14,7 +14,7 @@ public class CartMgr {
 		}
 	}
 	
-	// 더미 계정에 장바구니 임시 등록
+	// 더미 계정(admin)에 장바구니 임시 등록
 	public void insertTempCart(String items) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -22,12 +22,10 @@ public class CartMgr {
 		
 		try {
 			con = pool.getConnection();
-			
 			sql = "update carttbl set items = ? where id = 'admin'";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, items);
 			pstmt.executeUpdate();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
