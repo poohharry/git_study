@@ -8,8 +8,10 @@
   
   // 로그인 성공시 무조건 mainPage로 오는데, 만약 더미계정에 장바구니가 등록된 상태라면
   // 회원 장바구니와 합쳐줘야 함
-  if(id != null) {
-	  cMgr.mergeCart(id);
+  if(id != null) { // 로그인 상태라면?
+	  if(!cMgr.isEmpty()) { // 더미 장바구니가 비어있지 않은가?
+		  cMgr.mergeCart(id);	// 더미장바구니와 회원장바구니 병합
+	  }
   }
 %>
 <!DOCTYPE html>

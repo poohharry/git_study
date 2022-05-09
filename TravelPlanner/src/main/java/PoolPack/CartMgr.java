@@ -39,16 +39,17 @@ public class CartMgr {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		String sql = null;
-		
+		ResultSet rs = null;
 		try {
 			con = pool.getConnection();
 			// 변수명 설정과 concat으로 회원계정 장바구니와 더미 장바구니를 병합
-			sql = "select @test :=  C.items from carttbl C where id = 'admin';"
-					+ "update carttbl set items = concat(items, ',', @test) where id = ?;"
+			// 변수 못씀
+			sql = "update carttbl set items = concat(items, ',', '함안') where id = ?;";
 					// 병합이후 더미 장바구니 삭제(공백으로 update)
-					+ "update carttbl set items = null where id = 'admin';";
+//					+ "update carttbl set items = null where id = 'admin';";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
+			System.out.println(sql);
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
