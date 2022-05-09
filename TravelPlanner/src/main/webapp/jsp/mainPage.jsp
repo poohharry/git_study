@@ -1,9 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:useBean id="cMgr" class="PoolPack.CartMgr"/>
     
 <%
   request.setCharacterEncoding("UTF-8");
   String id = (String)session.getAttribute("lgnId");
+  
+  // 로그인 성공시 무조건 mainPage로 오는데, 만약 더미계정에 장바구니가 등록된 상태라면
+  // 회원 장바구니와 합쳐줘야 함
+  if(id != null) {
+	  cMgr.mergeCart(id);
+  }
 %>
 <!DOCTYPE html>
 <html lang="ko">
