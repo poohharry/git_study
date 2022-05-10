@@ -44,12 +44,18 @@ public class CartMgr {
 			con = pool.getConnection();
 			// 변수명 설정과 concat으로 회원계정 장바구니와 더미 장바구니를 병합
 			// 변수 못씀
-			sql = "update carttbl set items = concat(items, ',', '함안') where id = ?;";
-					// 병합이후 더미 장바구니 삭제(공백으로 update)
-//					+ "update carttbl set items = null where id = 'admin';";
+			sql = "update carttbl set items = (select * from (select concat(ifnull(items,\"\"), ',', ifnull((select items from carttbl where id = 'admin'),\"\")) from carttbl where id = ?) as temp) where id = ?";
+			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
+			pstmt.setString(2, id);
 			System.out.println(sql);
+			pstmt.executeUpdate();
+			
+			// 데이터베이스 등록 후 admin장바구니 초기화
+			// sql문 2줄을 한번에 돌릴 수 없기 때문에 한번 더 돌려줌
+			sql = "update carttbl set items = null where id = 'admin'";
+			pstmt = con.prepareStatement(sql);
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -58,8 +64,8 @@ public class CartMgr {
 		}
 	}
 	
-	// 더미 장바구니가 공백인지 판단하는 함수
-	public boolean isEmpty() {
+	// 장바구니가 공백인지 판단하는 함수(더미든 유저든 상관없이)
+	public boolean isEmpty(String id) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		String sql = null;
@@ -70,8 +76,9 @@ public class CartMgr {
 		
 		try {
 			con = pool.getConnection();
-			sql = "select items from carttbl where id = 'admin'";
+			sql = "select items from carttbl where id = ?";
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				// rs의 다음값이 있다는 것은 null이 아니라는 것
