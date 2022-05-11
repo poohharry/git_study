@@ -3,6 +3,8 @@
       session.invalidate();
 %>
 <script>
-   alert('로그아웃 되었습니다.');
-   location.href="mainPage.jsp";
+	// 세션 스토리지 초기화
+	sessionStorage.clear();
+	alert('로그아웃 되었습니다.');
+	location.href="mainPage.jsp";
 </script>

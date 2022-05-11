@@ -13,6 +13,8 @@
 		  cMgr.mergeCart(id);	// 더미장바구니와 회원장바구니 병합
 	  }
   }
+  String items = cMgr.searchItems(id);
+  
 %>
 <!DOCTYPE html>
 <html lang="ko">

@@ -25,7 +25,6 @@
 	}
 %>
 <script>
-	sessionStorage.clear();
 	alert("<%=msg%>");	
 	location.href="<%=url%>";
 </script>
