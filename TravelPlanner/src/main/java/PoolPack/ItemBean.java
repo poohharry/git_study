@@ -3,6 +3,7 @@ package PoolPack;
 public class ItemBean {
 	String name;
 
+	
 	public String getName() {
 		return name;
 	}
