@@ -112,18 +112,24 @@ public class CartMgr {
 		return items;
 	}
 	
-	
+	// 장바구니 목록(items)를 받아서 빈즈로 저장
 	// 빈즈에 추가한뒤 빈즈가 모인 ArrayList<ItemBean>을 리턴하는 함수
 	public List<ItemBean> createItemsList(String items) {
 		
 		List<String> itemArr = new ArrayList<String>();
-		List<ItemBean> bean = new ArrayList<ItemBean>();
+		List<ItemBean> ItemBeans = new ArrayList<ItemBean>();
 
 		for(int i = 1; i < items.split(",").length; i++) {
+			// 아이템 하나하나 빈즈를 만들어 줌
+			ItemBean bean = new ItemBean();
+			// 데이터베이스에 저장될 때 제일 앞에 ','가 붙기 때문에 split으로 나온 배열중 index 0은 버린다.
 			itemArr.add(items.split(",")[i]);
+			// 빈에 이름을 저장
+			bean.setName(items.split(",")[i]);
+			// 빈즈 리스트에 빈을 추가
+			ItemBeans.add(bean);
 		}
 		
-		
-		return bean;
+		return ItemBeans;
 	}
 }
