@@ -112,12 +112,12 @@ public class CartMgr {
 		return items;
 	}
 	
-	// 장바구니 목록(items)를 받아서 빈즈로 저장
+	// 장바구니 목록(items (문자열))를 받아서 빈즈로 저장
 	// 빈즈에 추가한뒤 빈즈가 모인 ArrayList<ItemBean>을 리턴하는 함수
 	public List<ItemBean> createItemsList(String items) {
 		
 		List<String> itemArr = new ArrayList<String>();
-		List<ItemBean> ItemBeans = new ArrayList<ItemBean>();
+		List<ItemBean> itemBeans = new ArrayList<ItemBean>();
 
 		for(int i = 1; i < items.split(",").length; i++) {
 			// 아이템 하나하나 빈즈를 만들어 줌
@@ -127,9 +127,26 @@ public class CartMgr {
 			// 빈에 이름을 저장
 			bean.setName(items.split(",")[i]);
 			// 빈즈 리스트에 빈을 추가
-			ItemBeans.add(bean);
+			itemBeans.add(bean);
 		}
 		
-		return ItemBeans;
+		return itemBeans;
+	}
+	
+	
+	// 아이템빈 하나를 받아서 그에 알맞는 정보를 HTML코드(문자열)로 반환해주는 함수
+	public String printCartList(ItemBean itemBean) {
+		String item_Html = "";
+		
+//		item_Html = "`<div class='inner_cart'>" +
+//					"<img src='${add}' class='inner_cart_img'>" + // 이미지 주소를 넣어줘야함
+//					"<span name='loca'>" + itemBean.getName() + "</span>" +
+//					"<button class='Xbutton' onclick='out_cart(${cartNum}, '${id}')'>X</button>" + // x버튼에 할당할 
+//					"</div>" + 
+//					"<hr style='margin: 5px 0;'>`";
+		
+		
+		
+		return item_Html;
 	}
 }

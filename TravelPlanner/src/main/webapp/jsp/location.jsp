@@ -1,8 +1,18 @@
+<%@page import="java.awt.print.Printable"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="PoolPack.ItemBean" %>
+<%@ page import="java.util.*" %>
+<jsp:useBean id="cMgr" class="PoolPack.CartMgr"/>
+
 <%
   request.setCharacterEncoding("UTF-8");
   String id = (String)session.getAttribute("lgnId");
+  List<ItemBean> itemBeans = null;
+  if(id != null) {
+	  String items = cMgr.searchItems(id);
+	  itemBeans = cMgr.createItemsList(items);	  
+  }
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -33,7 +43,11 @@
         </div>
         <%} else {%>
         <div id="member_basket">
-        	
+        	<%
+        		for(int i = 0; i < itemBeans.size(); i++) {
+        			/* out.println(cMgr.printCartList(itemBeans.get(i))); */
+        			out.println(itemBeans.get(i).getName());
+        	%>
         </div>
         <%}%>
     </aside>
