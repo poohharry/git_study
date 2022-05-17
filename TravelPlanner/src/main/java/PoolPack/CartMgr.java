@@ -141,7 +141,7 @@ public class CartMgr {
 //		item_Html = "`<div class='inner_cart'>" +
 //					"<img src='${add}' class='inner_cart_img'>" + // 이미지 주소를 넣어줘야함
 //					"<span name='loca'>" + itemBean.getName() + "</span>" +
-//					"<button class='Xbutton' onclick='out_cart(${cartNum}, '${id}')'>X</button>" + // x버튼에 할당할 
+//					"<button class='Xbutton' onclick='out_cart(${cartNum}, '${id}')'>X</button>" + // x버튼에 할당할 번호
 //					"</div>" + 
 //					"<hr style='margin: 5px 0;'>`";
 		

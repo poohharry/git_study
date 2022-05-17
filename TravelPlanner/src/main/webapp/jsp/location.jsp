@@ -47,9 +47,10 @@
         		for(int i = 0; i < itemBeans.size(); i++) {
         			/* out.println(cMgr.printCartList(itemBeans.get(i))); */
         			out.println(itemBeans.get(i).getName());
+        		}
         	%>
-        </div>
         <%}%>
+        </div>
     </aside>
     <div class="default_layout"> <!-- w:1200 h:최소 1500 -->
         <div style="text-align: right; font-size: 8pt;">윗 공간</div>
