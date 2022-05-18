@@ -25,8 +25,8 @@
     <style>
         
     </style>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/mainPage.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/mainPage.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- aos 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- aos -->
@@ -53,15 +53,15 @@
             <header>
                 <!-- 메인페이지 이동용 로고 그림 -->
                 <div class="logoBox"> <!-- w:150 h:75 -->
-                    <a href="mainPage.jsp"><img src="../img/logo.jpg" alt="로고" id="logo"></a> 
+                    <a href="./jsp/mainPage.jsp"><img src="./img/logo.jpg" alt="로고" id="logo"></a> 
                 </div>
                 
                 <!-- 네비바  -->
                 <nav> <!-- w:800, h:75 -->
                     <ul class="nav_menu">
-                        <li><a href="introduce.jsp" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
-                        <li><a href="map.jsp" class="nav_display">지도</a> </li>
-                        <li><a href="location.jsp" class="nav_display">추천관광지</a>
+                        <li><a href="./jsp/introduce.jsp" class="nav_display">소개</a></li> <!-- w:160 h:75 -->
+                        <li><a href="./jsp/map.jsp" class="nav_display">지도</a> </li>
+                        <li><a href="./jsp/location.jsp" class="nav_display">추천관광지</a>
                             <ul class="caption">
                                 <li><a href="#" class="caption_display">경상도</a></li>
                                 <li><a href="#" class="caption_display">전라도</a></li>
@@ -70,7 +70,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="restaurant.jsp" class="nav_display">추천식당</a>
+                        <li><a href="./jsp/restaurant.jsp" class="nav_display">추천식당</a>
                             <ul class="caption">
                                 <li><a href="#" class="caption_display">한식</a></li>
                                 <li><a href="#" class="caption_display">일식</a></li>
@@ -79,7 +79,7 @@
                                 <li><a href="#" class="caption_display">디저트, 카페</a></li>
                             </ul>
                         </li>
-                        <li><a href="rest.jsp" class="nav_display">추천숙소</a>
+                        <li><a href="./jsp/rest.jsp" class="nav_display">추천숙소</a>
                             <ul class="caption">
                                 <li><a href="#" class="caption_display">호텔</a></li>
                                 <li><a href="#" class="caption_display">모텔</a></li>
@@ -100,9 +100,9 @@
                     	}else {
                     		out.print(id.substring(0, 6) + "...님");
                     	}%>
-                    	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
+                    	<input type="button" value="로그아웃" onclick="location.href='./jsp/logout.jsp'">
                     <%}else {%>
-                        <a href="login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
+                        <a href="./jsp/login.jsp">로그인</a><!-- 로그인페이지로 이동하기 위한 로그인 하이퍼링크 -->
                     <% }%>
                         <button onclick="cart_open();">장바구니</button>
                     </div>
@@ -150,7 +150,7 @@
             </footer>
         </div> 
     </div>
-    <script src="../js/cart.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
