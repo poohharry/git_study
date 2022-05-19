@@ -9,6 +9,8 @@
   request.setCharacterEncoding("UTF-8");
   String id = (String)session.getAttribute("lgnId");
   List<ItemBean> itemBeans = null;
+  Map<String, ItemBean> beanMap = new HashMap<String, ItemBean>();
+  
   if(id != null) {
 	  String items = cMgr.searchItems(id);
 	  itemBeans = cMgr.createItemsList(items);	  
