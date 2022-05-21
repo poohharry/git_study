@@ -134,6 +134,9 @@ public class CartMgr {
 	}
 	
 	
+	// 이미지 주소, x버튼에 할당되는 id를 어떻게 할 것인가?
+	// js를 쓰지않고 사이드 장바구니 실시간 적용 가능?
+	
 	// 아이템빈 하나를 받아서 그에 알맞는 정보를 HTML코드(문자열)로 반환해주는 함수
 	public String printCartList(ItemBean itemBean) {
 		String item_Html = "";
