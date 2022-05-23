@@ -149,4 +149,8 @@ public class CartMgr {
 		
 		return item_Html;
 	}
+	
+	public void pulus() {
+		
+	}
 }
