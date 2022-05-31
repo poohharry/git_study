@@ -44,6 +44,7 @@ public class MemberMgr {
 			}
 			
 			// members 테이블에 회원이 추가됐으니, carttbl 에도 회원을 추가해줘야함
+			
 			sql = "insert carttbl(id) values(?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bean.getId());
@@ -105,6 +106,8 @@ public class MemberMgr {
 		
 		return flag;
 	}
+	
+	// 회원 결제 정보(주문내역)관련 메소드가 하나 필요함
 }
 
 
