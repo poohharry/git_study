@@ -89,6 +89,7 @@ public class MemberMgr {
 				return flag;
 			}
 			// sql문을 돌려 나온 비밀번호가 입력받은 비밀번호와 일치하는지 확인
+			// 추후에 비밀번호를 암호화시킬 필요가 있음...
 			// 일치하지 않으면 2를 반환
 			if(!(rs.getString(2).equals(pw))) {
 				flag = 2;
@@ -108,6 +109,9 @@ public class MemberMgr {
 	}
 	
 	// 회원 결제 정보(주문내역)관련 메소드가 하나 필요함
+	
+	
+	// 
 }
 
 
